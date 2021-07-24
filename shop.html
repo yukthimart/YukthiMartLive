@@ -1,0 +1,2169 @@
+<!Doctype HTML>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="description" content="yukthimart">
+		<meta name="keywords" content="yukthi, yukthimart, yukthi mart, yukthi shopping, online shopping, mart yukthi">
+		<meta name="author" content="engineerthoughts">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title> Yukthi Mart - Women Empowerment</title>
+		<link rel="shortcut icon" href="images/logo.jpeg">
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/carousel.css">
+		<link rel="stylesheet" href="css/rowcol.css">
+		<link rel="stylesheet" href="css/shoprowcol.css">
+		<link rel="stylesheet" href="css/sidenav.css">
+		<link rel="stylesheet" href="css/colorp.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		
+		<style>
+		#overlay
+		{
+		  position: fixed;
+		  display: none;
+		  width: 100%;
+		  height: 100%;
+		  top: 0;
+		  bottom: 0;
+		  background-color: rgba(0,0,0,0.97);
+		  z-index: 2;
+		  cursor: pointer;
+		  padding:1%;
+		}
+		
+		.overlayimg1, .overlayimg2
+		{
+		  position: fixed;
+		  display: none;
+		  width: 100%;
+		  height: 100%;
+		  top: 0;
+		  bottom: 0;
+		  background-color: rgba(0,0,0,0.97);
+		  z-index: 3;
+		  cursor: pointer;
+		  padding:5%;
+		}
+		</style>
+	</head>
+	
+	<body>
+
+		<div class="topnav" id="myTopnav">
+			<!--<a> <img src="images/logo.jpeg" width='20px', height='18px'> </a>-->
+			<a href="index.html" style="padding:0px"> &nbsp;<img src="images/logomenu.png" width='60px', height='50px'>&nbsp;</a>
+			<a href="shop.html" class="active">Shop 🛒</a>
+			<a href="mission.html">Mission 🚩</a>
+			<a href="family.html">Yukthi family 😃</a>
+			<a href="feedback.html">Feedback ✍</a>
+			<a href="contact.html">Contact 📞</a>
+			<a id="topnav6" href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">☰</a>
+		</div>
+		
+		<script src="js/bdesc.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/formsupdate.js"></script>
+		<script src="js/shop.js"></script>
+		<script src="js/onloadrun.js"></script>
+		<script src="js/onloadrunproduct.js"></script>
+		<!-- <script src="js/addcart.js"></script> -->
+
+		<div class="fixed">
+			<p class="cartListitem" onclick="openNav()">Cart List 🛒 <span id="cartquantity">0</span></p>
+		</div>
+		
+		<div id="mySidenav" class="sidenav">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<div style="background-color:#00203F;text-align:left;font-size:23px;">
+			
+				<img src="images/logomenu.png" width='60px', height='50px'>
+				<b><span style="font-family:calibri;color:white;margin-left:10px;">YUKTHIMART</span></b>	
+			</div>
+			<p>Cart List ▽</p>
+			
+			<center>
+			<table id="cartlist" class="cartlistclass">
+				<tr>
+					<th>Product</th>
+					<th>Size</th>
+					<th>Color</th>
+					<th>Quantity</th>
+					<th>Price</th>
+					<th>Actions</th>
+				</tr>
+			</table>
+			<p>TOTAL PRICE: ₹<span id="ptotalvalue">0</span></p>
+			<button id="proceedcheckout" class="checkoutbutton" onclick="openpay()" >Proceed to Checkout</button>
+			<br><br>
+			<div id="pdetails" style="display:none">
+			
+				
+					<div class="row">
+					
+						<div class="column50 c50left" style="text-align:right">
+							<span class="valtext">NAME</span>
+						</div>
+						<div class="column50 c50right">
+							<input type="text" class="getvalform" id="username" name="username" placeholder="Name" required></input>
+						</div>
+							<br><br>
+							
+						<div class="column50 c50left" style="text-align:right">
+							<span class="valtext">EMAIL</span>
+						</div>
+						<div class="column50 c50right">
+							<input type="text" class="getvalform" id="email" name="email" placeholder="Email ID" required></input>
+						</div>	
+							<br><br>
+						
+						<div class="column50 c50left" style="text-align:right">
+							<span class="valtext">ADDRESS</span>
+						</div>
+						<div class="column50 c50right">
+							<input type="text" class="getvalform" id="address" name="address" placeholder="Address" required></input>
+						</div>	
+							<br><br>
+							
+						<div class="column50 c50left" style="text-align:right">	
+							<span class="valtext">NUMBER</span>
+						</div>
+						<div class="column50 c50right">
+							<input type="text" class="getvalform" id="phone" name="phone" placeholder="10 digit Phone number" required></input>
+						</div>
+
+						<div class="column50 c50left" style="text-align:right">
+							<span class="valtext">Gift Wrap</span>
+							<input type="checkbox" id="giftcheck" value="gift">
+						</div>
+						
+						<div class="column50 c50right">
+							
+							<input type="text" class="getvalform" id="gifttxt" name="gifttxt" placeholder="Type Your message for gift"></input>
+						</div>
+						
+						<div id="errorId" style="display:none;"><span style="color:red">*</span><span style="color:black">Please enter the Required Field</span></div>
+						<div id="NerrorId" style="display:none;"><span style="color:red">*</span><span style="color:black">Please enter valid 10 digit Number</span></div>
+						<input type="submit" class="checkoutbutton" id="payment_btn" value="Place Your Order" onclick="checkvalue();"></input>
+						<br><br>
+					</div>
+				
+			</div>
+			
+			<div class="row">
+			<br>
+			<center><h3 style="color:black">Every product is at least one of the following...</h3>
+			
+			<div class="column">	
+				<img class="rowimg" src="images/info/1.png" style="width:50px">
+				<b><p> Women Created </p></b>
+				<p> Girl power right?! </p>
+			</div>
+			<div class="column">	
+				<img class="rowimg" src="images/info/2.png" style="width:50px">			
+				<b><p> Mission Driven </p></b>
+				<p> Help people in need! </p>
+			</div>
+			<div class="column">	
+				<img class="rowimg" src="images/info/3.png" style="width:50px">
+				<b><p> Ethically Made </p></b>
+				<p> Created with integrity in mind! </p>
+			</div>
+			<div class="column">
+				<img class="rowimg" src="images/info/4.png" style="width:50px">
+				<b><p> Sustainable </p></b>
+				<p> Environmentally friendly </p>
+			</div>
+			<div class="column">
+				<img class="rowimg" src="images/info/5.png" style="width:50px">
+				<b><p> Made in India </p></b>
+				<p> WOW !! </p>
+			</div>
+			</center>
+		</div>
+			
+		</div>
+		
+		<div class="row25">
+			<center>
+			<h3 style="color:black">PRODUCT CATALOG</h3>
+			
+			
+			<div style="margin-top:-20px;">
+				<div class="column50" id="crafttext" style="background-color:lightgreen;box-shadow: 0 4px 8px 0 grey, 0 6px 20px 0 rgba(0, 0, 0, 0.04);padding:5px;opacity:0.6" onclick="craftjs()">	
+					<img class="rowimg25" src="images/shop/craft.png">	</img><br>		
+					<span>HANDICRAFT</span>
+				</div>
+				<div class="column50" id="fashiontext" style="background-color:lightblue;box-shadow: 0 4px 8px 0 grey, 0 6px 20px 0 rgba(0, 0, 0, 0.04);padding:5px;opacity:0.6" onclick="fashionjs()">	
+					<img class="rowimg25" src="images/shop/fashion.png"></img><br>
+					<span>FASHION ACCESSORIES</span>
+				</div>
+				<div class="column50"  id="arttext" style="background-color:pink; box-shadow: 0 4px 8px 0 grey, 0 6px 20px 0 rgba(0, 0, 0, 0.04);padding:5px;opacity:0.6" onclick="artsjs()">	
+					<img class="rowimg25" src="images/shop/art.png"></img><br>
+					<span>ART &nbsp;</span>
+					<!-- <br><b><span style="float:right">Coming soon..</span></b> -->
+				</div>
+				
+				<div class="column50"  id="foodtext" style="background-color:orange; box-shadow: 0 4px 8px 0 grey, 0 6px 20px 0 rgba(0, 0, 0, 0.04);padding:5px;opacity:0.6" onclick="foodjs()">
+					<img class="rowimg25" src="images/shop/food.png"></img><br>
+					<span>FOOD PRODUCTS</span> 
+					<!-- <br><b><span style="float:right">Coming soon..</span></b> -->
+				</div>
+				
+				<div class="column50"  id="organictext" style="background-color:#BAB86C; box-shadow: 0 4px 8px 0 grey, 0 6px 20px 0 rgba(0, 0, 0, 0.04);padding:5px;opacity:0.6" onclick="organicjs()">
+					<img class="rowimg25" src="images/shop/organic.png"></img><br>
+					<span>ORGANIC PRODUCTS</span><br><b><span style="float:right">&nbsp</span></b> 
+					<!-- <br><b><span style="float:right">Coming soon..</span></b> -->
+				</div>
+				
+				<div class="column50"  id="giftstext" style="background-color:#C6C1E4; box-shadow: 0 4px 8px 0 grey, 0 6px 20px 0 rgba(0, 0, 0, 0.04);padding:5px;opacity:0.6" onclick="giftsjs()">
+					<img class="rowimg25" src="images/shop/gifts.png"></img><br>
+					<span>GIFTS</span> <br><b><span style="float:right">Coming soon..</span></b>
+				</div>
+				
+			</div>
+			</center>
+			
+		</div>
+		<br>
+		
+				<center>
+		
+		<div id="craftitems"  style="display:none">
+			<h3 style="font-family:century Gothic;background-color:lightgreen;text-align:center;box-shadow: 1px 1px 8px green;cursor:pointer;padding:5px;" onclick="wire()">Wire Items ▽</h3>
+			<div id="wireitem" style="display:none">
+				<div class="shoprow">
+					<div class="shopcolumn">
+						<h3 class="headprod" id="productname01">MULTICOLOR POOJAI KUDAI/BASKET</h3>
+						<p class="prodcode" id="productcode01">YW101</p>
+						
+						<img class="displayimgshop" src="products/YW101/1.jpg" id="proda01" width="60%"></img>
+						<img class="displayimgshop" src="products/YW101/2.jpg" id="prodb01" width="60%" style="display:none"></img>
+						
+						<div>
+							<button class="prodnavbutton" onclick="navprod1('proda01','prodb01');"> ◁ </button>
+							<button class="prodnavbutton" onclick="navprod2('proda01','prodb01');"> ▷ </button>
+						</div>
+						<br>
+
+						<button class="cartbutton" onclick="on();Loaddesc('YW101','rgba(144,238,144,0.97)');disableScroll()">View Details</button>
+						
+						
+					</div>
+					
+					<div class="shopcolumn">
+						<h3 class="headprod" id="productname02">SMALL KUDAI/BAG</h3>
+						<p class="prodcode" id="productcode02">YW102</p>
+						
+						<img class="displayimgshop" src="products/YW102/1.jpg" id="proda02" width="60%"></img>
+						<img class="displayimgshop" src="products/YW102/2.jpg" id="prodb02" width="60%" style="display:none"></img>
+						
+						<div>
+							<button class="prodnavbutton" onclick="navprod1('proda02','prodb02');"> ◁ </button>
+							<button class="prodnavbutton" onclick="navprod2('proda02','prodb02');"> ▷ </button>
+						</div>
+						<br>
+
+						
+						<button class="cartbutton" onclick="on();Loaddesc('YW102','rgba(144,238,144,0.97)');disableScroll()">View Details</button>
+						
+						
+					</div>
+					
+					<div class="shopcolumn">
+					
+						<h3 class="headprod" id="productname03">SQUARE KUDAI</h3>
+						<p class="prodcode" id="productcode03">YW103</p>
+						<img class="displayimgshop" src="products/YW103/1.jpg" id="proda03" width="60%"></img>
+						<img class="displayimgshop" src="products/YW103/2.jpg" id="prodb03" width="60%" style="display:none"></img>
+						
+						<div>
+							<button class="prodnavbutton" onclick="navprod1('proda03','prodb03');"> ◁ </button>
+							<button class="prodnavbutton" onclick="navprod2('proda03','prodb03');"> ▷ </button>
+						</div>
+						<br>
+
+						<button class="cartbutton" onclick="on();Loaddesc('YW103','rgba(144,238,144,0.97)');disableScroll()">View Details</button>
+												
+						
+					</div>
+
+					<div class="shopcolumn">
+					
+						<h3 class="headprod" id="productname04">HEART SHAPE BOWL</h3>
+						<p class="prodcode" id="productcode04">YW104</p>
+						<img class="displayimgshop" src="products/YW104/1.jpg" id="proda04" width="60%"></img>
+						<img class="displayimgshop" src="products/YW104/2.jpg" id="prodb04" width="60%" style="display:none"></img>
+						
+						<div>
+							<button class="prodnavbutton" onclick="navprod1('proda04','prodb04');"> ◁ </button>
+							<button class="prodnavbutton" onclick="navprod2('proda04','prodb04');"> ▷ </button>
+						</div>
+						<br>
+						
+						<button class="cartbutton" onclick="on();Loaddesc('YW104','rgba(144,238,144,0.97)');disableScroll()">View Details</button>
+						
+						
+					</div>
+					
+					<div class="shopcolumn">
+
+						<h3 class="headprod" id="productname05">CUTLARY/BRUSH ORGANIZER</h3>
+						<p class="prodcode" id="productcode05">YW105</p>
+						<img class="displayimgshop" src="products/YW105/1.jpg" id="proda05" width="60%"></img>
+						<img class="displayimgshop" src="products/YW105/2.jpg" id="prodb05" width="60%" style="display:none"></img>
+						
+						<div>
+							<button class="prodnavbutton" onclick="navprod1('proda05','prodb05');"> ◁ </button>
+							<button class="prodnavbutton" onclick="navprod2('proda05','prodb05');"> ▷ </button>
+						</div>
+						<br>
+						
+						<button class="cartbutton" onclick="on();Loaddesc('YW105','rgba(144,238,144,0.97)');disableScroll()">View Details</button>
+						
+					</div>
+					
+					<div class="shopcolumn">
+					
+						<h3 class="headprod" id="productname06">CELL PHONE/ LETTER HOLDER</h3>
+						<p class="prodcode" id="productcode06">YW106</p>
+						<img class="displayimgshop" src="products/YW106/1.jpg" id="proda06" width="60%"></img>
+						<img class="displayimgshop" src="products/YW106/2.jpg" id="prodb06" width="60%" style="display:none"></img>
+						
+						<div>
+							<button class="prodnavbutton" onclick="navprod1('proda06','prodb06');"> ◁ </button>
+							<button class="prodnavbutton" onclick="navprod2('proda06','prodb06');"> ▷ </button>
+						</div>
+						<br>
+						
+						<button class="cartbutton" onclick="on();Loaddesc('YW106','rgba(144,238,144,0.97)');disableScroll()">View Details</button>
+											
+						
+					</div>
+					
+					<div class="shopcolumn">
+					
+						<h3 class="headprod" id="productname07">KUMKUMA SIMIL</h3>
+						<p class="prodcode" id="productcode07">YW107</p>
+						<img class="displayimgshop" src="products/YW107/1.jpg" id="proda07" width="60%"></img>
+						<img class="displayimgshop" src="products/YW107/2.jpg" id="prodb07" width="60%" style="display:none"></img>
+						
+						<div>
+							<button class="prodnavbutton" onclick="navprod1('proda07','prodb07');"> ◁ </button>
+							<button class="prodnavbutton" onclick="navprod2('proda07','prodb07');"> ▷ </button>
+						</div>
+						<br>
+						
+						<button class="cartbutton" onclick="on();Loaddesc('YW107','rgba(144,238,144,0.97)');disableScroll()">View Details</button>
+						
+						
+						
+					</div>
+					
+					<div class="shopcolumn">
+					
+						<h3 class="headprod" id="productname08">SMALL BAG WITH HANDLE</h3>
+						<p class="prodcode" id="productcode08">YW108</p>
+						<img class="displayimgshop" src="products/YW108/1.jpg" id="proda08" width="60%"></img>
+						<img class="displayimgshop" src="products/YW108/2.jpg" id="prodb08" width="60%" style="display:none"></img>
+						
+						<div>
+							<button class="prodnavbutton" onclick="navprod1('proda08','prodb08');"> ◁ </button>
+							<button class="prodnavbutton" onclick="navprod2('proda08','prodb08');"> ▷ </button>
+						</div>
+						<br>
+						
+						<button class="cartbutton" onclick="on();Loaddesc('YW108','rgba(144,238,144,0.97)');disableScroll()">View Details</button>
+											
+						
+					</div>
+					
+					<div class="shopcolumn">
+					
+						<h3 class="headprod" id="productname09">ROUND BOWL</h3>
+						<p class="prodcode" id="productcode09">YW109</p>
+						<img class="displayimgshop" src="products/YW109/1.jpg" id="proda09" width="60%"></img>
+						<img class="displayimgshop" src="products/YW109/2.jpg" id="prodb09" width="60%" style="display:none"></img>
+						
+						<div>
+							<button class="prodnavbutton" onclick="navprod1('proda09','prodb09');"> ◁ </button>
+							<button class="prodnavbutton" onclick="navprod2('proda09','prodb09');"> ▷ </button>
+						</div>
+						<br>
+						
+						<button class="cartbutton" onclick="on();Loaddesc('YW109','rgba(144,238,144,0.97)');disableScroll()">View Details</button>
+						
+					</div>
+					
+					<div class="shopcolumn">
+					
+						<h3 class="headprod" id="productname10">SQUARE BOWL</h3>
+						<p class="prodcode" id="productcode10">YW110</p>
+						<img class="displayimgshop" src="products/YW110/1.jpg" id="proda10" width="60%"></img>
+						<img class="displayimgshop" src="products/YW110/2.jpg" id="prodb10" width="60%" style="display:none"></img>
+						
+						<div>
+							<button class="prodnavbutton" onclick="navprod1('proda10','prodb10');"> ◁ </button>
+							<button class="prodnavbutton" onclick="navprod2('proda10','prodb10');"> ▷ </button>
+						</div>
+						<br>
+						
+						<button class="cartbutton" onclick="on();Loaddesc('YW110','rgba(144,238,144,0.97)');disableScroll()">View Details</button>
+						
+						
+					</div>
+					
+					<div class="shopcolumn">
+					
+						<h3 class="headprod" id="productname11">BOWL WITH BEADS</h3>
+						<p class="prodcode" id="productcode11">YW111</p>
+						<img class="displayimgshop" src="products/YW111/1.jpg" id="proda11" width="60%"></img>
+						<img class="displayimgshop" src="products/YW111/2.jpg" id="prodb11" width="60%" style="display:none"></img>
+						
+						<div>
+							<button class="prodnavbutton" onclick="navprod1('proda11','prodb11');"> ◁ </button>
+							<button class="prodnavbutton" onclick="navprod2('proda11','prodb11');"> ▷ </button>
+						</div>
+						<br>
+						
+						<button class="cartbutton" onclick="on();Loaddesc('YW111','rgba(144,238,144,0.97)');disableScroll()">View Details</button>
+									
+						
+					</div>
+				
+				</div>
+			</div>
+		</div>
+		
+		
+		<div id="fashionitems" style="display:none">
+			<h3 style="font-family:century Gothic;background-color:lightblue;text-align:center;box-shadow: 1px 1px 8px green;cursor:pointer;padding:5px;" onclick="cloth()">Cloth Bag Items ▽</h3>
+			<div id="clothbagitems" style="display:none">
+			
+			<div class="shoprow">
+			
+				<div class="shopcolumn">
+				
+					<h3 class="headprod" id="cproductname01">FABRIC LUNCH BAG</h3>
+					<p class="prodcode" id="cproductcode01">YC101</p>
+					<img class="displayimgshop" src="products/YC101/1.jpg" id="cproda01" width="60%"></img>
+					<img class="displayimgshop" src="products/YC101/2.jpg" id="cprodb01" width="60%" style="display:none"></img>
+					
+					<div>
+						<button class="prodnavbutton" onclick="navprod1('cproda01','cprodb01');"> ◁ </button>
+						<button class="prodnavbutton" onclick="navprod2('cproda01','cprodb01');"> ▷ </button>
+					</div>
+					<br>
+					
+					<button class="cartbutton" onclick="on();Loaddesc('YC101','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+					
+				</div>
+
+				<div class="shopcolumn">
+				
+					<h3 class="headprod" id="cproductname02">FABRIC POUCH</h3>
+					<p class="prodcode" id="cproductcode02">YC102</p>
+					<img class="displayimgshop" src="products/YC102/1.jpg" id="cproda02" width="60%"></img>
+					<img class="displayimgshop" src="products/YC102/2.jpg" id="cprodb02" width="60%" style="display:none"></img>
+					
+					<div>
+						<button class="prodnavbutton" onclick="navprod1('cproda02','cprodb02');"> ◁ </button>
+						<button class="prodnavbutton" onclick="navprod2('cproda02','cprodb02');"> ▷ </button>
+					</div>
+					<br>
+					
+					<button class="cartbutton" onclick="on();Loaddesc('YC102','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+					
+				</div>
+				
+				<div class="shopcolumn">
+				
+					<h3 class="headprod" id="cproductname03">PAIR POUCH</h3>
+					<p class="prodcode" id="cproductcode03">YC103</p>
+					<img class="displayimgshop" src="products/YC103/1.jpg" id="cproda03" width="60%"></img>
+					<img class="displayimgshop" src="products/YC103/2.jpg" id="cprodb03" width="60%" style="display:none"></img>
+					
+					<div>
+						<button class="prodnavbutton" onclick="navprod1('cproda03','cprodb03');"> ◁ </button>
+						<button class="prodnavbutton" onclick="navprod2('cproda03','cprodb03');"> ▷ </button>
+					</div>
+					<br>
+					
+					<button class="cartbutton" onclick="on();Loaddesc('YC103','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+					
+				</div>
+				
+				<div class="shopcolumn">
+				
+					<h3 class="headprod" id="cproductname04">CLOTH BAG</h3>
+					<p class="prodcode" id="cproductcode04">YC104</p>
+					<img class="displayimgshop" src="products/YC104/1.jpg" id="cproda04" width="60%"></img>
+					<img class="displayimgshop" src="products/YC104/2.jpg" id="cprodb04" width="60%" style="display:none"></img>
+					
+					<div>
+						<button class="prodnavbutton" onclick="navprod1('cproda04','cprodb04');"> ◁ </button>
+						<button class="prodnavbutton" onclick="navprod2('cproda04','cprodb04');"> ▷ </button>
+					</div>
+					<br>
+					<button class="cartbutton" onclick="on();Loaddesc('YC104','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+					
+				</div>
+			
+				<div class="shopcolumn">
+					
+					<h3 class="headprod" id="cproductname05">BLOCK PRINTED POUCH</h3>
+					<p class="prodcode" id="cproductcode05">YC105</p>
+					<img class="displayimgshop" src="products/YC105/1.jpg" id="cproda05" width="60%"></img>
+					<img class="displayimgshop" src="products/YC105/2.jpg" id="cprodb05" width="60%" style="display:none"></img>
+					
+					<div>
+						<button class="prodnavbutton" onclick="navprod1('cproda05','cprodb05');"> ◁ </button>
+						<button class="prodnavbutton" onclick="navprod2('cproda05','cprodb05');"> ▷ </button>
+					</div>
+					<br>
+					
+					<button class="cartbutton" onclick="on();Loaddesc('YC105','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+					
+				</div>
+				
+				<div class="shopcolumn">
+				
+					<h3 class="headprod" id="cproductname06">RED BAG WITH HAND EMBROIDERY</h3>
+					<p class="prodcode" id="cproductcode06">YC106</p>
+					<img class="displayimgshop" src="products/YC106/1.jpg" id="cproda06" width="60%"></img>
+					<img class="displayimgshop" src="products/YC106/2.jpg" id="cprodb06" width="60%" style="display:none"></img>
+					
+					<div>
+						<button class="prodnavbutton" onclick="navprod1('cproda06','cprodb06');"> ◁ </button>
+						<button class="prodnavbutton" onclick="navprod2('cproda06','cprodb06');"> ▷ </button>
+					</div>
+					<br>
+					
+					<button class="cartbutton" onclick="on();Loaddesc('YC106','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+					
+				</div>
+				
+				<div class="shopcolumn">
+				
+					<h3 class="headprod" id="cproductname07">BLUE COLOR POUCH SET</h3>
+					<p class="prodcode" id="cproductcode07">YC107</p>
+					<img class="displayimgshop" src="products/YC107/1.jpg" id="cproda07" width="60%"></img>
+					<img class="displayimgshop" src="products/YC107/2.jpg" id="cprodb07" width="60%" style="display:none"></img>
+					
+					<div>
+						<button class="prodnavbutton" onclick="navprod1('cproda07','cprodb07');"> ◁ </button>
+						<button class="prodnavbutton" onclick="navprod2('cproda07','cprodb07');"> ▷ </button>
+					</div>
+					<br>
+					
+					<button class="cartbutton" onclick="on();Loaddesc('YC107','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+					
+				</div>
+				
+				<div class="shopcolumn">
+				
+					<h3 class="headprod" id="cproductname08">BLACK COLOR POUCH SET</h3>
+					<p class="prodcode" id="cproductcode08">YC108</p>
+					<img class="displayimgshop" src="products/YC108/1.jpg" id="cproda08" width="60%"></img>
+					<img class="displayimgshop" src="products/YC108/2.jpg" id="cprodb08" width="60%" style="display:none"></img>
+					
+					<div>
+						<button class="prodnavbutton" onclick="navprod1('cproda08','cprodb08');"> ◁ </button>
+						<button class="prodnavbutton" onclick="navprod2('cproda08','cprodb08');"> ▷ </button>
+					</div>
+					<br>
+					
+					<button class="cartbutton" onclick="on();Loaddesc('YC108','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+					
+				</div>
+				
+				<div class="shopcolumn">
+				
+					<h3 class="headprod" id="cproductname09">SMALL SIZE POUCH IN BLUE COLOR</h3>
+					<p class="prodcode" id="cproductcode09">YC109</p>
+					<img class="displayimgshop" src="products/YC109/1.jpg" id="cproda09" width="60%"></img>
+					<img class="displayimgshop" src="products/YC109/2.jpg" id="cprodb09" width="60%" style="display:none"></img>
+					
+					<div>
+						<button class="prodnavbutton" onclick="navprod1('cproda09','cprodb09');"> ◁ </button>
+						<button class="prodnavbutton" onclick="navprod2('cproda09','cprodb09');"> ▷ </button>
+					</div>
+					<br>
+					
+					<button class="cartbutton" onclick="on();Loaddesc('YC109','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+					
+				</div>
+			</div>
+			</div>
+			
+			<h3 style="font-family:century Gothic;background-color:lightblue;text-align:center;box-shadow: 1px 1px 8px green;cursor:pointer;padding:5px;" onclick="jewels()">Jewel Items ▽</h3>
+			<div id="jewelitems" style="display:none">
+				<div class="shoprow">
+			
+					<div class="shopcolumn">
+					
+						<h3 class="headprod" id="jproductname01">Fabric Bead Stud</h3>
+						<p class="prodcode" id="jproductcode01">YJ101</p>
+						<img class="displayimgshop" src="products/YJ101/1.jpg" id="jproda01" width="60%"></img>
+						<img class="displayimgshop" src="products/YJ101/1.jpg" id="jprodb01" width="60%" style="display:none"></img>
+						
+						<div>
+							<button class="prodnavbutton" onclick="navprod1('jproda01','jprodb01');"> ◁ </button>
+							<button class="prodnavbutton" onclick="navprod2('jproda01','jprodb01');"> ▷ </button>
+						</div>
+						<br>
+						
+						<button class="cartbutton" onclick="on();Loaddesc('YJ101','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+						
+					</div>
+					
+					<div class="shopcolumn">
+					
+						<h3 class="headprod" id="jproductname02">Fabric Bead Stud</h3>
+						<p class="prodcode" id="jproductcode02">YJ102</p>
+						<img class="displayimgshop" src="products/YJ102/1.jpg" id="jproda02" width="60%"></img>
+						<img class="displayimgshop" src="products/YJ102/1.jpg" id="jprodb02" width="60%" style="display:none"></img>
+						
+						<div>
+							<button class="prodnavbutton" onclick="navprod1('jproda02','jprodb02');"> ◁ </button>
+							<button class="prodnavbutton" onclick="navprod2('jproda02','jprodb02');"> ▷ </button>
+						</div>
+						<br>
+						
+						<button class="cartbutton" onclick="on();Loaddesc('YJ102','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+						
+						
+					</div>
+					
+					<div class="shopcolumn">
+					
+						<h3 class="headprod" id="jproductname03">Fabric Bead Stud</h3>
+						<p class="prodcode" id="jproductcode03">YJ103</p>
+						<img class="displayimgshop" src="products/YJ103/1.jpg" id="jproda03" width="60%"></img>
+						<img class="displayimgshop" src="products/YJ103/1.jpg" id="jprodb03" width="60%" style="display:none"></img>
+						
+						<div>
+							<button class="prodnavbutton" onclick="navprod1('jproda03','jprodb03');"> ◁ </button>
+							<button class="prodnavbutton" onclick="navprod2('jproda03','jprodb03');"> ▷ </button>
+						</div>
+						<br>
+						
+						<button class="cartbutton" onclick="on();Loaddesc('YJ103','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+						
+					</div>
+					
+					<div class="shopcolumn">
+					
+						<h3 class="headprod" id="jproductname04">Fabric Bead Stud</h3>
+						<p class="prodcode" id="jproductcode04">YJ104</p>
+						<img class="displayimgshop" src="products/YJ104/1.jpg" id="jproda04" width="60%"></img>
+						<img class="displayimgshop" src="products/YJ104/1.jpg" id="jprodb04" width="60%" style="display:none"></img>
+						
+						<div>
+							<button class="prodnavbutton" onclick="navprod1('jproda04','jprodb04');"> ◁ </button>
+							<button class="prodnavbutton" onclick="navprod2('jproda04','jprodb04');"> ▷ </button>
+						</div>
+						<br>
+						
+						<button class="cartbutton" onclick="on();Loaddesc('YJ104','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+						
+					</div>
+					
+					<div class="shopcolumn">
+					
+						<h3 class="headprod" id="jproductname05">Fabric Bead Stud</h3>
+						<p class="prodcode" id="jproductcode05">YJ105</p>
+						<img class="displayimgshop" src="products/YJ105/1.jpg" id="jproda05" width="60%"></img>
+						<img class="displayimgshop" src="products/YJ105/1.jpg" id="jprodb05" width="60%" style="display:none"></img>
+						
+						<div>
+							<button class="prodnavbutton" onclick="navprod1('jproda05','jprodb05');"> ◁ </button>
+							<button class="prodnavbutton" onclick="navprod2('jproda05','jprodb05');"> ▷ </button>
+						</div>
+						<br>
+						
+						<button class="cartbutton" onclick="on();Loaddesc('YJ105','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+						
+					</div>
+					
+					<div class="shopcolumn">
+					
+						<h3 class="headprod" id="jproductname06">Fabric Bead Stud</h3>
+						<p class="prodcode" id="jproductcode06">YJ106</p>
+						<img class="displayimgshop" src="products/YJ106/1.jpg" id="jproda06" width="60%"></img>
+						<img class="displayimgshop" src="products/YJ106/1.jpg" id="jprodb06" width="60%" style="display:none"></img>
+						
+						<div>
+							<button class="prodnavbutton" onclick="navprod1('jproda06','jprodb06');"> ◁ </button>
+							<button class="prodnavbutton" onclick="navprod2('jproda06','jprodb06');"> ▷ </button>
+						</div>
+						<br>
+						
+						
+						<button class="cartbutton" onclick="on();Loaddesc('YJ106','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+						
+					</div>
+					
+					<div class="shopcolumn">
+					
+						<h3 class="headprod" id="jproductname07">Fabric Stud</h3>
+						<p class="prodcode" id="jproductcode07">YJ107</p>
+						<img class="displayimgshop" src="products/YJ107/1.jpg" id="jproda07" width="60%"></img>
+						<img class="displayimgshop" src="products/YJ107/1.jpg" id="jprodb07" width="60%" style="display:none"></img>
+						
+						<div>
+							<button class="prodnavbutton" onclick="navprod1('jproda07','jprodb07');"> ◁ </button>
+							<button class="prodnavbutton" onclick="navprod2('jproda07','jprodb07');"> ▷ </button>
+						</div>
+						<br>
+						
+						<button class="cartbutton" onclick="on();Loaddesc('YJ107','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+						
+					</div>
+					
+					<div class="shopcolumn">
+					
+						<h3 class="headprod" id="jproductname08">Denim Bead Stud</h3>
+						<p class="prodcode" id="jproductcode08">YJ108</p>
+						<img class="displayimgshop" src="products/YJ108/1.jpg" id="jproda08" width="60%"></img>
+						<img class="displayimgshop" src="products/YJ108/1.jpg" id="jprodb08" width="60%" style="display:none"></img>
+						
+						<div>
+							<button class="prodnavbutton" onclick="navprod1('jproda08','jprodb08');"> ◁ </button>
+							<button class="prodnavbutton" onclick="navprod2('jproda08','jprodb08');"> ▷ </button>
+						</div>
+						<br>
+						
+						<button class="cartbutton" onclick="on();Loaddesc('YJ108','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+						
+						
+					</div>
+					
+					<div class="shopcolumn">
+					
+						<h3 class="headprod" id="jproductname09">Fabric Bead Stud</h3>
+						<p class="prodcode" id="jproductcode09">YJ109</p>
+						<img class="displayimgshop" src="products/YJ109/1.jpg" id="jproda09" width="60%"></img>
+						<img class="displayimgshop" src="products/YJ109/1.jpg" id="jprodb09" width="60%" style="display:none"></img>
+						
+						<div>
+							<button class="prodnavbutton" onclick="navprod1('jproda09','jprodb09');"> ◁ </button>
+							<button class="prodnavbutton" onclick="navprod2('jproda09','jprodb09');"> ▷ </button>
+						</div>
+						<br>
+						
+						<button class="cartbutton" onclick="on();Loaddesc('YJ109','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+						
+					</div>
+					
+					<div class="shopcolumn">
+					
+						<h3 class="headprod" id="jproductname10">Fabric Stud</h3>
+						<p class="prodcode" id="jproductcode10">YJ110</p>
+						<img class="displayimgshop" src="products/YJ110/1.jpg" id="jproda10" width="60%"></img>
+						<img class="displayimgshop" src="products/YJ110/1.jpg" id="jprodb10" width="60%" style="display:none"></img>
+						
+						<div>
+							<button class="prodnavbutton" onclick="navprod1('jproda10','jprodb10');"> ◁ </button>
+							<button class="prodnavbutton" onclick="navprod2('jproda10','jprodb10');"> ▷ </button>
+						</div>
+						<br>
+						
+						<button class="cartbutton" onclick="on();Loaddesc('YJ110','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+						
+					</div>
+					
+					<div class="shopcolumn">
+					
+						<h3 class="headprod" id="jproductname11">Fabric Stud</h3>
+						<p class="prodcode" id="jproductcode11">YJ111</p>
+						<img class="displayimgshop" src="products/YJ111/1.jpg" id="jproda11" width="60%"></img>
+						<img class="displayimgshop" src="products/YJ111/1.jpg" id="jprodb11" width="60%" style="display:none"></img>
+						
+						<div>
+							<button class="prodnavbutton" onclick="navprod1('jproda11','jprodb11');"> ◁ </button>
+							<button class="prodnavbutton" onclick="navprod2('jproda11','jprodb11');"> ▷ </button>
+						</div>
+						<br>
+
+						<button class="cartbutton" onclick="on();Loaddesc('YJ111','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+						
+					</div>
+					
+					<div class="shopcolumn">
+					
+						<h3 class="headprod" id="jproductname12">German silver balerina</h3>
+						<p class="prodcode" id="jproductcode12">YJ112</p>
+						<img class="displayimgshop" src="products/YJ112/1.jpg" id="jproda12" width="60%"></img>
+						<img class="displayimgshop" src="products/YJ112/1.jpg" id="jprodb12" width="60%" style="display:none"></img>
+						
+						<div>
+							<button class="prodnavbutton" onclick="navprod1('jproda12','jprodb12');"> ◁ </button>
+							<button class="prodnavbutton" onclick="navprod2('jproda12','jprodb12');"> ▷ </button>
+						</div>
+						<br>
+						
+						<button class="cartbutton" onclick="on();Loaddesc('YJ112','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+						
+					</div>
+					
+					<div class="shopcolumn">
+					
+						<h3 class="headprod" id="jproductname13">German silver element – The Flower</h3>
+						<p class="prodcode" id="jproductcode13">YJ113</p>
+						<img class="displayimgshop" src="products/YJ113/1.jpg" id="jproda13" width="60%"></img>
+						<img class="displayimgshop" src="products/YJ113/1.jpg" id="jprodb13" width="60%" style="display:none"></img>
+						
+						<div>
+							<button class="prodnavbutton" onclick="navprod1('jproda13','jprodb13');"> ◁ </button>
+							<button class="prodnavbutton" onclick="navprod2('jproda13','jprodb13');"> ▷ </button>
+						</div>
+						<br>
+						
+						<button class="cartbutton" onclick="on();Loaddesc('YJ113','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+						
+					</div>
+					
+				</div>
+			</div>
+		
+			<h3 style="font-family:century Gothic;background-color:lightblue;text-align:center;box-shadow: 1px 1px 8px green;cursor:pointer;padding:5px;" onclick="dress()">Ikkat Cotton Dresses/Materials ▽</h3>
+			<div id="dressitems" style="display:none">
+			
+			<div class="shoprow">
+			
+				<div class="shopcolumn">
+				
+					<h3 class="headprod" id="dproductname01">Georgette Anarkali outfit orange color</h3>
+					<p class="prodcode" id="dproductcode01">YD101</p>
+					<img class="displayimgshop" src="products/YD101/1.jpg" id="dproda01" width="60%"></img>
+					<img class="displayimgshop" src="products/YD101/2.jpg" id="dprodb01" width="60%" style="display:none"></img>
+					
+					<div>
+						<button class="prodnavbutton" onclick="navprod1('dproda01','dprodb01');"> ◁ </button>
+						<button class="prodnavbutton" onclick="navprod2('dproda01','dprodb01');"> ▷ </button>
+					</div>
+					<br>
+					
+					<button class="cartbutton" onclick="on();Loaddesc('YD101','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+					
+				</div>
+
+				<div class="shopcolumn">
+				
+					<h3 class="headprod" id="dproductname02">Georgette Anarkali outfit pink color</h3>
+					<p class="prodcode" id="dproductcode02">YD102</p>
+					<img class="displayimgshop" src="products/YD102/1.jpg" id="dproda02" width="60%"></img>
+					<img class="displayimgshop" src="products/YD102/2.jpg" id="dprodb02" width="60%" style="display:none"></img>
+					
+					<div>
+						<button class="prodnavbutton" onclick="navprod1('dproda02','dprodb02');"> ◁ </button>
+						<button class="prodnavbutton" onclick="navprod2('dproda02','dprodb02');"> ▷ </button>
+					</div>
+					<br>
+					
+					<button class="cartbutton" onclick="on();Loaddesc('YD102','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+					
+				</div>
+				
+				<div class="shopcolumn">
+				
+					<h3 class="headprod" id="dproductname03">Georgette Anarkali outfit  blue color</h3>
+					<p class="prodcode" id="dproductcode03">YD103</p>
+					<img class="displayimgshop" src="products/YD103/1.jpg" id="dproda03" width="60%"></img>
+					<img class="displayimgshop" src="products/YD103/2.jpg" id="dprodb03" width="60%" style="display:none"></img>
+					
+					<div>
+						<button class="prodnavbutton" onclick="navprod1('dproda03','dprodb03');"> ◁ </button>
+						<button class="prodnavbutton" onclick="navprod2('dproda03','dprodb03');"> ▷ </button>
+					</div>
+					<br>
+					
+					<button class="cartbutton" onclick="on();Loaddesc('YD103','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+					
+				</div>
+				
+				<div class="shopcolumn">
+				
+					<h3 class="headprod" id="dproductname04">Georgette Anarkali outfit green color</h3>
+					<p class="prodcode" id="dproductcode04">YD104</p>
+					<img class="displayimgshop" src="products/YD104/1.jpg" id="dproda04" width="60%"></img>
+					<img class="displayimgshop" src="products/YD104/2.jpg" id="dprodb04" width="60%" style="display:none"></img>
+					
+					<div>
+						<button class="prodnavbutton" onclick="navprod1('dproda04','dprodb04');"> ◁ </button>
+						<button class="prodnavbutton" onclick="navprod2('dproda04','dprodb04');"> ▷ </button>
+					</div>
+					<br>
+					<button class="cartbutton" onclick="on();Loaddesc('YD104','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+					
+				</div>
+			
+				<div class="shopcolumn">
+					
+					<h3 class="headprod" id="dproductname05">Cotton dress material </h3>
+					<p class="prodcode" id="dproductcode05">YD105</p>
+					<img class="displayimgshop" src="products/YD105/1.jpg" id="dproda05" width="60%"></img>
+					<img class="displayimgshop" src="products/YD105/2.jpg" id="dprodb05" width="60%" style="display:none"></img>
+					
+					<div>
+						<button class="prodnavbutton" onclick="navprod1('dproda05','dprodb05');"> ◁ </button>
+						<button class="prodnavbutton" onclick="navprod2('dproda05','dprodb05');"> ▷ </button>
+					</div>
+					<br>
+					
+					<button class="cartbutton" onclick="on();Loaddesc('YD105','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+					
+				</div>
+				
+				<div class="shopcolumn">
+				
+					<h3 class="headprod" id="dproductname06">Cotton dress material </h3>
+					<p class="prodcode" id="dproductcode06">YD106</p>
+					<img class="displayimgshop" src="products/YD106/1.jpg" id="dproda06" width="60%"></img>
+					<img class="displayimgshop" src="products/YD106/2.jpg" id="dprodb06" width="60%" style="display:none"></img>
+					
+					<div>
+						<button class="prodnavbutton" onclick="navprod1('dproda06','dprodb06');"> ◁ </button>
+						<button class="prodnavbutton" onclick="navprod2('dproda06','dprodb06');"> ▷ </button>
+					</div>
+					<br>
+					
+					<button class="cartbutton" onclick="on();Loaddesc('YD106','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+					
+				</div>
+				
+				<div class="shopcolumn">
+				
+					<h3 class="headprod" id="dproductname07">Silkmix chudidhar material 1</h3>
+					<p class="prodcode" id="dproductcode07">YD107</p>
+					<img class="displayimgshop" src="products/YD107/1.jpg" id="dproda07" width="60%"></img>
+					<img class="displayimgshop" src="products/YD107/2.jpg" id="dprodb07" width="60%" style="display:none"></img>
+					
+					<div>
+						<button class="prodnavbutton" onclick="navprod1('dproda07','dprodb07');"> ◁ </button>
+						<button class="prodnavbutton" onclick="navprod2('dproda07','dprodb07');"> ▷ </button>
+					</div>
+					<br>
+					
+					<button class="cartbutton" onclick="on();Loaddesc('YD107','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+					
+				</div>
+				
+				<div class="shopcolumn">
+				
+					<h3 class="headprod" id="dproductname08">Silkmix chudidhar material 2</h3>
+					<p class="prodcode" id="dproductcode08">YD108</p>
+					<img class="displayimgshop" src="products/YD108/1.jpg" id="dproda08" width="60%"></img>
+					<img class="displayimgshop" src="products/YD108/2.jpg" id="dprodb08" width="60%" style="display:none"></img>
+					
+					<div>
+						<button class="prodnavbutton" onclick="navprod1('dproda08','dprodb08');"> ◁ </button>
+						<button class="prodnavbutton" onclick="navprod2('dproda08','dprodb08');"> ▷ </button>
+					</div>
+					<br>
+					
+					<button class="cartbutton" onclick="on();Loaddesc('YD108','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+					
+				</div>
+				
+				<div class="shopcolumn">
+				
+					<h3 class="headprod" id="dproductname09">Silkmix chudidhar material 3</h3>
+					<p class="prodcode" id="dproductcode09">YD109</p>
+					<img class="displayimgshop" src="products/YD109/1.jpg" id="dproda09" width="60%"></img>
+					<img class="displayimgshop" src="products/YD109/2.jpg" id="dprodb09" width="60%" style="display:none"></img>
+					
+					<div>
+						<button class="prodnavbutton" onclick="navprod1('dproda09','dprodb09');"> ◁ </button>
+						<button class="prodnavbutton" onclick="navprod2('dproda09','dprodb09');"> ▷ </button>
+					</div>
+					<br>
+					
+					<button class="cartbutton" onclick="on();Loaddesc('YD109','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+					
+				</div>
+				
+				<div class="shopcolumn">
+				
+					<h3 class="headprod" id="dproductname03">Silkmix chudidhar material 4</h3>
+					<p class="prodcode" id="dproductcode03">YD110</p>
+					<img class="displayimgshop" src="products/YD110/1.jpg" id="dproda10" width="60%"></img>
+					<img class="displayimgshop" src="products/YD110/2.jpg" id="dprodb10" width="60%" style="display:none"></img>
+					
+					<div>
+						<button class="prodnavbutton" onclick="navprod1('dproda10','dprodb10');"> ◁ </button>
+						<button class="prodnavbutton" onclick="navprod2('dproda10','dprodb10');"> ▷ </button>
+					</div>
+					<br>
+					
+					<button class="cartbutton" onclick="on();Loaddesc('YD110','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+					
+				</div>
+				
+				<div class="shopcolumn">
+				
+					<h3 class="headprod" id="dproductname04">Silkmix chudidhar material 5</h3>
+					<p class="prodcode" id="dproductcode04">YD111</p>
+					<img class="displayimgshop" src="products/YD111/1.jpg" id="dproda11" width="60%"></img>
+					<img class="displayimgshop" src="products/YD111/2.jpg" id="dprodb11" width="60%" style="display:none"></img>
+					
+					<div>
+						<button class="prodnavbutton" onclick="navprod1('dproda11','dprodb11');"> ◁ </button>
+						<button class="prodnavbutton" onclick="navprod2('dproda11','dprodb11');"> ▷ </button>
+					</div>
+					<br>
+					<button class="cartbutton" onclick="on();Loaddesc('YD111','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+					
+				</div>
+			
+				<div class="shopcolumn">
+					
+					<h3 class="headprod" id="dproductname05">Silkmix chudidhar material 6</h3>
+					<p class="prodcode" id="dproductcode05">YD112</p>
+					<img class="displayimgshop" src="products/YD112/1.jpg" id="dproda12" width="60%"></img>
+					<img class="displayimgshop" src="products/YD112/2.jpg" id="dprodb12" width="60%" style="display:none"></img>
+					
+					<div>
+						<button class="prodnavbutton" onclick="navprod1('dproda12','dprodb12');"> ◁ </button>
+						<button class="prodnavbutton" onclick="navprod2('dproda12','dprodb12');"> ▷ </button>
+					</div>
+					<br>
+					
+					<button class="cartbutton" onclick="on();Loaddesc('YD112','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+					
+				</div>
+				
+				<div class="shopcolumn">
+				
+					<h3 class="headprod" id="dproductname06">Butter cotton saree 1</h3>
+					<p class="prodcode" id="dproductcode06">YD113</p>
+					<img class="displayimgshop" src="products/YD113/1.jpg" id="dproda13" width="60%"></img>
+					<img class="displayimgshop" src="products/YD113/2.jpg" id="dprodb13" width="60%" style="display:none"></img>
+					
+					<div>
+						<button class="prodnavbutton" onclick="navprod1('dproda13','dprodb13');"> ◁ </button>
+						<button class="prodnavbutton" onclick="navprod2('dproda13','dprodb13');"> ▷ </button>
+					</div>
+					<br>
+					
+					<button class="cartbutton" onclick="on();Loaddesc('YD113','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+					
+				</div>
+				
+				<div class="shopcolumn">
+				
+					<h3 class="headprod" id="dproductname07">Butter cotton saree 2</h3>
+					<p class="prodcode" id="dproductcode07">YD114</p>
+					<img class="displayimgshop" src="products/YD114/1.jpg" id="dproda14" width="60%"></img>
+					<img class="displayimgshop" src="products/YD114/2.jpg" id="dprodb14" width="60%" style="display:none"></img>
+					
+					<div>
+						<button class="prodnavbutton" onclick="navprod1('dproda14','dprodb14');"> ◁ </button>
+						<button class="prodnavbutton" onclick="navprod2('dproda14','dprodb14');"> ▷ </button>
+					</div>
+					<br>
+					
+					<button class="cartbutton" onclick="on();Loaddesc('YD114','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+					
+				</div>
+				
+				<div class="shopcolumn">
+				
+					<h3 class="headprod" id="dproductname08">Butter cotton saree 3</h3>
+					<p class="prodcode" id="dproductcode08">YD115</p>
+					<img class="displayimgshop" src="products/YD115/1.jpg" id="dproda15" width="60%"></img>
+					<img class="displayimgshop" src="products/YD115/2.jpg" id="dprodb15" width="60%" style="display:none"></img>
+					
+					<div>
+						<button class="prodnavbutton" onclick="navprod1('dproda15','dprodb15');"> ◁ </button>
+						<button class="prodnavbutton" onclick="navprod2('dproda15','dprodb15');"> ▷ </button>
+					</div>
+					<br>
+					
+					<button class="cartbutton" onclick="on();Loaddesc('YD115','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+					
+				</div>
+				
+				<div class="shopcolumn">
+				
+					<h3 class="headprod" id="dproductname09">Butter cotton saree 4</h3>
+					<p class="prodcode" id="dproductcode09">YD116</p>
+					<img class="displayimgshop" src="products/YD116/1.jpg" id="dproda16" width="60%"></img>
+					<img class="displayimgshop" src="products/YD116/2.jpg" id="dprodb16" width="60%" style="display:none"></img>
+					
+					<div>
+						<button class="prodnavbutton" onclick="navprod1('dproda16','dprodb16');"> ◁ </button>
+						<button class="prodnavbutton" onclick="navprod2('dproda16','dprodb16');"> ▷ </button>
+					</div>
+					<br>
+					
+					<button class="cartbutton" onclick="on();Loaddesc('YD116','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+					
+				</div>
+				
+				<div class="shopcolumn">
+				
+					<h3 class="headprod" id="dproductname09">Butter cotton saree 5</h3>
+					<p class="prodcode" id="dproductcode09">YD117</p>
+					<img class="displayimgshop" src="products/YD117/1.jpg" id="dproda17" width="60%"></img>
+					<img class="displayimgshop" src="products/YD117/2.jpg" id="dprodb17" width="60%" style="display:none"></img>
+					
+					<div>
+						<button class="prodnavbutton" onclick="navprod1('dproda17','dprodb17');"> ◁ </button>
+						<button class="prodnavbutton" onclick="navprod2('dproda17','dprodb17');"> ▷ </button>
+					</div>
+					<br>
+					
+					<button class="cartbutton" onclick="on();Loaddesc('YD117','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+					
+				</div>
+			</div>
+			</div>
+		</div>
+		
+		<div id="artitems" style="display:none">
+		<h3 style="font-family:century Gothic;background-color:lightblue;text-align:center;box-shadow: 1px 1px 8px green;cursor:pointer;padding:5px;" onclick="canvas()">Canvas Art ▽</h3>
+			<div id="canvasitem" style="display:none">
+				<div class="shoprow">
+			
+					<div class="shopcolumn">
+					
+						<h3 class="headprod" id="jproductname01">Canvas 1</h3>
+						<p class="prodcode" id="jproductcode01">YA101</p>
+						<img class="displayimgshop" src="products/YA101/1.jpg" id="aproda01" width="60%"></img>
+						<img class="displayimgshop" src="products/YA101/1.jpg" id="aprodb01" width="60%" style="display:none"></img>
+						
+						<div>
+							<button class="prodnavbutton" onclick="navprod1('aproda01','aprodb01');"> ◁ </button>
+							<button class="prodnavbutton" onclick="navprod2('aproda01','aprodb01');"> ▷ </button>
+						</div>
+						<br>
+						
+						<button class="cartbutton" onclick="on();Loaddesc('YA101','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+						
+					</div>
+					
+					<div class="shopcolumn">
+					
+						<h3 class="headprod" id="jproductname02">Canvas 2</h3>
+						<p class="prodcode" id="jproductcode02">YA102</p>
+						<img class="displayimgshop" src="products/YA102/1.jpg" id="aproda02" width="60%"></img>
+						<img class="displayimgshop" src="products/YA102/1.jpg" id="aprodb02" width="60%" style="display:none"></img>
+						
+						<div>
+							<button class="prodnavbutton" onclick="navprod1('aproda02','aprodb02');"> ◁ </button>
+							<button class="prodnavbutton" onclick="navprod2('aproda02','aprodb02');"> ▷ </button>
+						</div>
+						<br>
+						
+						<button class="cartbutton" onclick="on();Loaddesc('YA102','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+						
+						
+					</div>
+					
+					<div class="shopcolumn">
+					
+						<h3 class="headprod" id="jproductname03">Canvas 3</h3>
+						<p class="prodcode" id="jproductcode03">YA103</p>
+						<img class="displayimgshop" src="products/YA103/1.jpg" id="aproda03" width="60%"></img>
+						<img class="displayimgshop" src="products/YA103/1.jpg" id="aprodb03" width="60%" style="display:none"></img>
+						
+						<div>
+							<button class="prodnavbutton" onclick="navprod1('aproda03','aprodb03');"> ◁ </button>
+							<button class="prodnavbutton" onclick="navprod2('aproda03','aprodb03');"> ▷ </button>
+						</div>
+						<br>
+						
+						<button class="cartbutton" onclick="on();Loaddesc('YA103','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+						
+					</div>
+					
+					<div class="shopcolumn">
+					
+						<h3 class="headprod" id="jproductname04">Canvas 4</h3>
+						<p class="prodcode" id="jproductcode04">YA104</p>
+						<img class="displayimgshop" src="products/YA104/1.jpg" id="aproda04" width="60%"></img>
+						<img class="displayimgshop" src="products/YA104/1.jpg" id="aprodb04" width="60%" style="display:none"></img>
+						
+						<div>
+							<button class="prodnavbutton" onclick="navprod1('aproda04','aprodb04');"> ◁ </button>
+							<button class="prodnavbutton" onclick="navprod2('aproda04','aprodb04');"> ▷ </button>
+						</div>
+						<br>
+						
+						<button class="cartbutton" onclick="on();Loaddesc('YA104','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+						
+					</div>
+					
+					<div class="shopcolumn">
+					
+						<h3 class="headprod" id="jproductname05">Canvas 5</h3>
+						<p class="prodcode" id="jproductcode05">YA105</p>
+						<img class="displayimgshop" src="products/YA105/1.jpg" id="aproda05" width="60%"></img>
+						<img class="displayimgshop" src="products/YA105/1.jpg" id="aprodb05" width="60%" style="display:none"></img>
+						
+						<div>
+							<button class="prodnavbutton" onclick="navprod1('aproda05','aprodb05');"> ◁ </button>
+							<button class="prodnavbutton" onclick="navprod2('aproda05','aprodb05');"> ▷ </button>
+						</div>
+						<br>
+						
+						<button class="cartbutton" onclick="on();Loaddesc('YA105','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+						
+					</div>
+					
+					<div class="shopcolumn">
+					
+						<h3 class="headprod" id="jproductname06">Canvas 6</h3>
+						<p class="prodcode" id="jproductcode06">YA106</p>
+						<img class="displayimgshop" src="products/YA106/1.jpg" id="aproda06" width="60%"></img>
+						<img class="displayimgshop" src="products/YA106/1.jpg" id="aprodb06" width="60%" style="display:none"></img>
+						
+						<div>
+							<button class="prodnavbutton" onclick="navprod1('aproda06','aprodb06');"> ◁ </button>
+							<button class="prodnavbutton" onclick="navprod2('aproda06','aprodb06');"> ▷ </button>
+						</div>
+						<br>
+						
+						
+						<button class="cartbutton" onclick="on();Loaddesc('YA106','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+						
+					</div>
+					
+					<div class="shopcolumn">
+					
+						<h3 class="headprod" id="jproductname07">Canvas 7</h3>
+						<p class="prodcode" id="jproductcode07">YA107</p>
+						<img class="displayimgshop" src="products/YA107/1.jpg" id="aproda07" width="60%"></img>
+						<img class="displayimgshop" src="products/YA107/1.jpg" id="aprodb07" width="60%" style="display:none"></img>
+						
+						<div>
+							<button class="prodnavbutton" onclick="navprod1('aproda07','aprodb07');"> ◁ </button>
+							<button class="prodnavbutton" onclick="navprod2('aproda07','aprodb07');"> ▷ </button>
+						</div>
+						<br>
+						
+						<button class="cartbutton" onclick="on();Loaddesc('YA107','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+						
+					</div>
+					
+					<div class="shopcolumn">
+					
+						<h3 class="headprod" id="jproductname08">Canvas 8</h3>
+						<p class="prodcode" id="jproductcode08">YA108</p>
+						<img class="displayimgshop" src="products/YA108/1.jpg" id="aproda08" width="60%"></img>
+						<img class="displayimgshop" src="products/YA108/1.jpg" id="aprodb08" width="60%" style="display:none"></img>
+						
+						<div>
+							<button class="prodnavbutton" onclick="navprod1('aproda08','aprodb08');"> ◁ </button>
+							<button class="prodnavbutton" onclick="navprod2('aproda08','aprodb08');"> ▷ </button>
+						</div>
+						<br>
+						
+						<button class="cartbutton" onclick="on();Loaddesc('YA108','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+						
+						
+					</div>
+				</div>
+			</div>
+		</div>
+					
+		
+		<div id="giftsitems" style="display:none">
+			<h3 style="font-family:century gothic;text-align:center;">Gift Items <br> Products are Yet to Add"</h3>
+		</div>
+		
+		
+		<div id="fooditems" style="display:none">
+			<h3 style="font-family:century Gothic;background-color:lightblue;text-align:center;box-shadow: 1px 1px 8px green;cursor:pointer;padding:5px;" onclick="food()">Nalam Naturals ▽</h3>
+			<div id="foodsitems" style="display:none">
+				<div class="shoprow">
+			
+					<div class="shopcolumn">
+					
+						<h3 class="headprod" id="jproductname01">Beetroot Malt 250g</h3>
+						<p class="prodcode" id="jproductcode01">YF101</p>
+						<img class="displayimgshop" src="products/YF101/1.jpg" id="fnproda01" width="60%"></img>
+						<img class="displayimgshop" src="products/YF101/2.jpg" id="fnprodb01" width="60%" style="display:none"></img>
+						
+						<div>
+							<button class="prodnavbutton" onclick="navprod1('fnproda01','fnprodb01');"> ◁ </button>
+							<button class="prodnavbutton" onclick="navprod2('fnproda01','fnprodb01');"> ▷ </button>
+						</div>
+						<br>
+						
+						<button class="cartbutton" onclick="on();Loaddesc('YF101','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+						
+					</div>
+					
+					<div class="shopcolumn">
+					
+						<h3 class="headprod" id="jproductname02">Beetroot Malt 50g</h3>
+						<p class="prodcode" id="jproductcode02">YF102</p>
+						<img class="displayimgshop" src="products/YF102/1.jpg" id="fnproda02" width="60%"></img>
+						<img class="displayimgshop" src="products/YF102/2.jpg" id="fnprodb02" width="60%" style="display:none"></img>
+						
+						<div>
+							<button class="prodnavbutton" onclick="navprod1('fnproda02','fnprodb02');"> ◁ </button>
+							<button class="prodnavbutton" onclick="navprod2('fnproda02','fnprodb02');"> ▷ </button>
+						</div>
+						<br>
+						
+						<button class="cartbutton" onclick="on();Loaddesc('YF102','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+						
+						
+					</div>
+					
+					<div class="shopcolumn">
+					
+						<h3 class="headprod" id="jproductname03">Sprouted Health Mix 250g</h3>
+						<p class="prodcode" id="jproductcode03">YF103</p>
+						<img class="displayimgshop" src="products/YF103/1.jpg" id="fnproda03" width="60%"></img>
+						<img class="displayimgshop" src="products/YF103/2.jpg" id="fnprodb03" width="60%" style="display:none"></img>
+						
+						<div>
+							<button class="prodnavbutton" onclick="navprod1('fnproda03','fnprodb03');"> ◁ </button>
+							<button class="prodnavbutton" onclick="navprod2('fnproda03','fnprodb03');"> ▷ </button>
+						</div>
+						<br>
+						
+						<button class="cartbutton" onclick="on();Loaddesc('YF103','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+						
+					</div>
+					
+					<div class="shopcolumn">
+					
+						<h3 class="headprod" id="jproductname04">Sprouted Health Mix 50g</h3>
+						<p class="prodcode" id="jproductcode04">YF104</p>
+						<img class="displayimgshop" src="products/YF104/1.jpg" id="fnproda04" width="60%"></img>
+						<img class="displayimgshop" src="products/YF104/2.jpg" id="fnprodb04" width="60%" style="display:none"></img>
+						
+						<div>
+							<button class="prodnavbutton" onclick="navprod1('fnproda04','fnprodb04');"> ◁ </button>
+							<button class="prodnavbutton" onclick="navprod2('fnproda04','fnprodb04');"> ▷ </button>
+						</div>
+						<br>
+						
+						<button class="cartbutton" onclick="on();Loaddesc('YF104','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+						
+					</div>
+					
+					<div class="shopcolumn">
+					
+						<h3 class="headprod" id="jproductname05">Nenthiram Banana Powder 200g</h3>
+						<p class="prodcode" id="jproductcode05">YF105</p>
+						<img class="displayimgshop" src="products/YF105/1.jpg" id="fnproda05" width="60%"></img>
+						<img class="displayimgshop" src="products/YF105/2.jpg" id="fnprodb05" width="60%" style="display:none"></img>
+						
+						<div>
+							<button class="prodnavbutton" onclick="navprod1('fnproda05','fnprodb05');"> ◁ </button>
+							<button class="prodnavbutton" onclick="navprod2('fnproda05','fnprodb05');"> ▷ </button>
+						</div>
+						<br>
+						
+						<button class="cartbutton" onclick="on();Loaddesc('YF105','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+						
+					</div>
+					
+					<div class="shopcolumn">
+					
+						<h3 class="headprod" id="jproductname06">Nenthiram Banana Powder 50g</h3>
+						<p class="prodcode" id="jproductcode06">YF106</p>
+						<img class="displayimgshop" src="products/YF106/1.jpg" id="fnproda06" width="60%"></img>
+						<img class="displayimgshop" src="products/YF106/2.jpg" id="fnprodb06" width="60%" style="display:none"></img>
+						
+						<div>
+							<button class="prodnavbutton" onclick="navprod1('fnproda06','fnprodb06');"> ◁ </button>
+							<button class="prodnavbutton" onclick="navprod2('fnproda06','fnprodb06');"> ▷ </button>
+						</div>
+						<br>
+						
+						
+						<button class="cartbutton" onclick="on();Loaddesc('YF106','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+						
+					</div>
+					
+					<div class="shopcolumn">
+					
+						<h3 class="headprod" id="jproductname07">Jackfruit Flour 200g</h3>
+						<p class="prodcode" id="jproductcode07">YF107</p>
+						<img class="displayimgshop" src="products/YF107/1.jpg" id="fnproda07" width="60%"></img>
+						<img class="displayimgshop" src="products/YF107/2.jpg" id="fnprodb07" width="60%" style="display:none"></img>
+						
+						<div>
+							<button class="prodnavbutton" onclick="navprod1('fnproda07','fnprodb07');"> ◁ </button>
+							<button class="prodnavbutton" onclick="navprod2('fnproda07','fnprodb07');"> ▷ </button>
+						</div>
+						<br>
+						
+						<button class="cartbutton" onclick="on();Loaddesc('YF107','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+						
+					</div>
+					
+					<div class="shopcolumn">
+					
+						<h3 class="headprod" id="jproductname08">Samba putta podi</h3>
+						<p class="prodcode" id="jproductcode08">YF108</p>
+						<img class="displayimgshop" src="products/YF108/1.jpg" id="fnproda08" width="60%"></img>
+						<img class="displayimgshop" src="products/YF108/2.jpg" id="fnprodb08" width="60%" style="display:none"></img>
+						
+						<div>
+							<button class="prodnavbutton" onclick="navprod1('fnproda08','fnprodb08');"> ◁ </button>
+							<button class="prodnavbutton" onclick="navprod2('fnproda08','fnprodb08');"> ▷ </button>
+						</div>
+						<br>
+						
+						<button class="cartbutton" onclick="on();Loaddesc('YF108','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+						
+						
+					</div>
+					<div class="shopcolumn">
+					
+						<h3 class="headprod" id="jproductname09">Karupatti</h3>
+						<p class="prodcode" id="jproductcode09">YF109</p>
+						<img class="displayimgshop" src="products/YF109/1.jpg" id="fnproda09" width="60%"></img>
+						<img class="displayimgshop" src="products/YF109/2.jpg" id="fnprodb09" width="60%" style="display:none"></img>
+						
+						<div>
+							<button class="prodnavbutton" onclick="navprod1('fnproda09','fnprodb09');"> ◁ </button>
+							<button class="prodnavbutton" onclick="navprod2('fnproda09','fnprodb09');"> ▷ </button>
+						</div>
+						<br>
+						
+						<button class="cartbutton" onclick="on();Loaddesc('YF109','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+						
+						
+					</div>
+					<div class="shopcolumn">
+					
+						<h3 class="headprod" id="jproductname10">Idiyappam flour </h3>
+						<p class="prodcode" id="jproductcode10">YF110</p>
+						<img class="displayimgshop" src="products/YF110/1.jpg" id="fnproda10" width="60%"></img>
+						<img class="displayimgshop" src="products/YF110/2.jpg" id="fnprodb10" width="60%" style="display:none"></img>
+						
+						<div>
+							<button class="prodnavbutton" onclick="navprod1('fnproda10','fnprodb10');"> ◁ </button>
+							<button class="prodnavbutton" onclick="navprod2('fnproda10','fnprodb10');"> ▷ </button>
+						</div>
+						<br>
+						
+						<button class="cartbutton" onclick="on();Loaddesc('YF110','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+						
+						
+					</div>
+					
+					<div class="shopcolumn">
+					
+						<h3 class="headprod" id="jproductname11">Beetroot Malt 250g</h3>
+						<p class="prodcode" id="jproductcode11">YF111</p>
+						<img class="displayimgshop" src="products/YF111/1.jpg" id="fnproda11" width="60%"></img>
+						<img class="displayimgshop" src="products/YF111/2.jpg" id="fnprodb11" width="60%" style="display:none"></img>
+						
+						<div>
+							<button class="prodnavbutton" onclick="navprod1('fnproda11','fnprodb11');"> ◁ </button>
+							<button class="prodnavbutton" onclick="navprod2('fnproda11','fnprodb11');"> ▷ </button>
+						</div>
+						<br>
+						
+						<button class="cartbutton" onclick="on();Loaddesc('YF111','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+						
+					</div>
+					
+					<div class="shopcolumn">
+					
+						<h3 class="headprod" id="jproductname12">Beetroot Malt 50g</h3>
+						<p class="prodcode" id="jproductcode12">YF112</p>
+						<img class="displayimgshop" src="products/YF112/1.jpg" id="fnproda12" width="60%"></img>
+						<img class="displayimgshop" src="products/YF112/2.jpg" id="fnprodb12" width="60%" style="display:none"></img>
+						
+						<div>
+							<button class="prodnavbutton" onclick="navprod1('fnproda12','fnprodb12');"> ◁ </button>
+							<button class="prodnavbutton" onclick="navprod2('fnproda12','fnprodb12');"> ▷ </button>
+						</div>
+						<br>
+						
+						<button class="cartbutton" onclick="on();Loaddesc('YF112','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+						
+						
+					</div>
+					
+					<div class="shopcolumn">
+					
+						<h3 class="headprod" id="jproductname13">Sprouted Health Mix 250g</h3>
+						<p class="prodcode" id="jproductcode13">YF113</p>
+						<img class="displayimgshop" src="products/YF113/1.jpg" id="fnproda13" width="60%"></img>
+						<img class="displayimgshop" src="products/YF113/2.jpg" id="fnprodb13" width="60%" style="display:none"></img>
+						
+						<div>
+							<button class="prodnavbutton" onclick="navprod1('fnproda13','fnprodb13');"> ◁ </button>
+							<button class="prodnavbutton" onclick="navprod2('fnproda13','fnprodb13');"> ▷ </button>
+						</div>
+						<br>
+						
+						<button class="cartbutton" onclick="on();Loaddesc('YF113','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+						
+					</div>
+					
+					<div class="shopcolumn">
+					
+						<h3 class="headprod" id="jproductname14">Sprouted Health Mix 50g</h3>
+						<p class="prodcode" id="jproductcode14">YF114</p>
+						<img class="displayimgshop" src="products/YF114/1.jpg" id="fnproda14" width="60%"></img>
+						<img class="displayimgshop" src="products/YF114/2.jpg" id="fnprodb14" width="60%" style="display:none"></img>
+						
+						<div>
+							<button class="prodnavbutton" onclick="navprod1('fnproda14','fnprodb14');"> ◁ </button>
+							<button class="prodnavbutton" onclick="navprod2('fnproda14','fnprodb14');"> ▷ </button>
+						</div>
+						<br>
+						
+						<button class="cartbutton" onclick="on();Loaddesc('YF114','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+						
+					</div>
+					
+					<div class="shopcolumn">
+					
+						<h3 class="headprod" id="jproductname15">Nenthiram Banana Powder 200g</h3>
+						<p class="prodcode" id="jproductcode15">YF115</p>
+						<img class="displayimgshop" src="products/YF115/1.jpg" id="fnproda15" width="60%"></img>
+						<img class="displayimgshop" src="products/YF115/2.jpg" id="fnprodb15" width="60%" style="display:none"></img>
+						
+						<div>
+							<button class="prodnavbutton" onclick="navprod1('fnproda15','fnprodb15');"> ◁ </button>
+							<button class="prodnavbutton" onclick="navprod2('fnproda15','fnprodb15');"> ▷ </button>
+						</div>
+						<br>
+						
+						<button class="cartbutton" onclick="on();Loaddesc('YF115','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+						
+					</div>
+					
+					<div class="shopcolumn">
+					
+						<h3 class="headprod" id="jproductname16">Nenthiram Banana Powder 50g</h3>
+						<p class="prodcode" id="jproductcode16">YF116</p>
+						<img class="displayimgshop" src="products/YF116/1.jpg" id="fnproda16" width="60%"></img>
+						<img class="displayimgshop" src="products/YF116/2.jpg" id="fnprodb16" width="60%" style="display:none"></img>
+						
+						<div>
+							<button class="prodnavbutton" onclick="navprod1('fnproda16','fnprodb16');"> ◁ </button>
+							<button class="prodnavbutton" onclick="navprod2('fnproda16','fnprodb16');"> ▷ </button>
+						</div>
+						<br>
+						
+						
+						<button class="cartbutton" onclick="on();Loaddesc('YF116','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+						
+					</div>
+					
+					<div class="shopcolumn">
+					
+						<h3 class="headprod" id="jproductname17">Jackfruit Flour 200g</h3>
+						<p class="prodcode" id="jproductcode17">YF117</p>
+						<img class="displayimgshop" src="products/YF117/1.jpg" id="fnproda17" width="60%"></img>
+						<img class="displayimgshop" src="products/YF117/2.jpg" id="fnprodb17" width="60%" style="display:none"></img>
+						
+						<div>
+							<button class="prodnavbutton" onclick="navprod1('fnproda17','fnprodb17');"> ◁ </button>
+							<button class="prodnavbutton" onclick="navprod2('fnproda17','fnprodb17');"> ▷ </button>
+						</div>
+						<br>
+						
+						<button class="cartbutton" onclick="on();Loaddesc('YF117','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+						
+					</div>
+				</div>
+			</div>
+			
+			<h3 style="font-family:century Gothic;background-color:lightblue;text-align:center;box-shadow: 1px 1px 8px green;cursor:pointer;padding:5px;" onclick="foodvp()">Vital Powders ▽</h3>
+			<div id="foodvpitems" style="display:none">
+				<div class="shoprow">
+			
+					<div class="shopcolumn">
+					
+						<h3 class="headprod" id="jproductname01">Dry Nuts Powder</h3>
+						<p class="prodcode" id="jproductcode01">YF201</p>
+						<img class="displayimgshop" src="products/YF201/1.jpg" id="fvproda01" width="60%"></img>
+						<img class="displayimgshop" src="products/YF201/2.jpg" id="fvprodb01" width="60%" style="display:none"></img>
+						
+						<div>
+							<button class="prodnavbutton" onclick="navprod1('fvproda01','fvprodb01');"> ◁ </button>
+							<button class="prodnavbutton" onclick="navprod2('fvproda01','fvprodb01');"> ▷ </button>
+						</div>
+						<br>
+						
+						<button class="cartbutton" onclick="on();Loaddesc('YF201','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+						
+					</div>
+					
+					<div class="shopcolumn">
+					
+						<h3 class="headprod" id="jproductname02">Protein Powder (Nuts & Seeds)</h3>
+						<p class="prodcode" id="jproductcode02">YF202</p>
+						<img class="displayimgshop" src="products/YF202/1.jpg" id="fvproda02" width="60%"></img>
+						<img class="displayimgshop" src="products/YF202/2.jpg" id="fvprodb02" width="60%" style="display:none"></img>
+						
+						<div>
+							<button class="prodnavbutton" onclick="navprod1('fvproda02','fvprodb02');"> ◁ </button>
+							<button class="prodnavbutton" onclick="navprod2('fvproda02','fvprodb02');"> ▷ </button>
+						</div>
+						<br>
+						
+						<button class="cartbutton" onclick="on();Loaddesc('YF202','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+						
+						
+					</div>
+					
+					<div class="shopcolumn">
+					
+						<h3 class="headprod" id="jproductname03">Dates Powder</h3>
+						<p class="prodcode" id="jproductcode03">YF203</p>
+						<img class="displayimgshop" src="products/YF203/1.jpg" id="fvproda03" width="60%"></img>
+						<img class="displayimgshop" src="products/YF203/2.jpg" id="fvprodb03" width="60%" style="display:none"></img>
+						
+						<div>
+							<button class="prodnavbutton" onclick="navprod1('fvproda03','fvprodb03');"> ◁ </button>
+							<button class="prodnavbutton" onclick="navprod2('fvproda03','fvprodb03');"> ▷ </button>
+						</div>
+						<br>
+						
+						<button class="cartbutton" onclick="on();Loaddesc('YF203','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+						
+					</div>
+					
+					<div class="shopcolumn">
+					
+						<h3 class="headprod" id="jproductname04">Sprouted Ragi Powder</h3>
+						<p class="prodcode" id="jproductcode04">YF204</p>
+						<img class="displayimgshop" src="products/YF204/1.jpg" id="fvproda04" width="60%"></img>
+						<img class="displayimgshop" src="products/YF204/2.jpg" id="fvprodb04" width="60%" style="display:none"></img>
+						
+						<div>
+							<button class="prodnavbutton" onclick="navprod1('fvproda04','fvprodb04');"> ◁ </button>
+							<button class="prodnavbutton" onclick="navprod2('fvproda04','fvprodb04');"> ▷ </button>
+						</div>
+						<br>
+						
+						<button class="cartbutton" onclick="on();Loaddesc('YF204','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+						
+					</div>
+					
+					<div class="shopcolumn">
+					
+						<h3 class="headprod" id="jproductname05">Sprouted Ragi & Nuts Powder</h3>
+						<p class="prodcode" id="jproductcode05">YF205</p>
+						<img class="displayimgshop" src="products/YF205/1.jpg" id="fvproda05" width="60%"></img>
+						<img class="displayimgshop" src="products/YF205/2.jpg" id="fvprodb05" width="60%" style="display:none"></img>
+						
+						<div>
+							<button class="prodnavbutton" onclick="navprod1('fvproda05','fvprodb05');"> ◁ </button>
+							<button class="prodnavbutton" onclick="navprod2('fvproda05','fvprodb05');"> ▷ </button>
+						</div>
+						<br>
+						
+						<button class="cartbutton" onclick="on();Loaddesc('YF205','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+						
+					</div>
+					
+					<div class="shopcolumn">
+					
+						<h3 class="headprod" id="jproductname06">Sprouted Ragi & Dates Powder</h3>
+						<p class="prodcode" id="jproductcode06">YF206</p>
+						<img class="displayimgshop" src="products/YF206/1.jpg" id="fvproda06" width="60%"></img>
+						<img class="displayimgshop" src="products/YF206/2.jpg" id="fvprodb06" width="60%" style="display:none"></img>
+						
+						<div>
+							<button class="prodnavbutton" onclick="navprod1('fvproda06','fvprodb06');"> ◁ </button>
+							<button class="prodnavbutton" onclick="navprod2('fvproda06','fvprodb06');"> ▷ </button>
+						</div>
+						<br>
+						
+						
+						<button class="cartbutton" onclick="on();Loaddesc('YF206','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+						
+					</div>
+					
+					<div class="shopcolumn">
+					
+						<h3 class="headprod" id="jproductname07">Sprouted Ragi  & Banana Powder</h3>
+						<p class="prodcode" id="jproductcode07">YF207</p>
+						<img class="displayimgshop" src="products/YF207/1.jpg" id="fvproda07" width="60%"></img>
+						<img class="displayimgshop" src="products/YF207/2.jpg" id="fvprodb07" width="60%" style="display:none"></img>
+						
+						<div>
+							<button class="prodnavbutton" onclick="navprod1('fvproda07','fvprodb07');"> ◁ </button>
+							<button class="prodnavbutton" onclick="navprod2('fvproda07','fvprodb07');"> ▷ </button>
+						</div>
+						<br>
+						
+						<button class="cartbutton" onclick="on();Loaddesc('YF207','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+						
+					</div>
+					
+					<div class="shopcolumn">
+					
+						<h3 class="headprod" id="jproductname08">Sprouted Ragi & Almond Powder</h3>
+						<p class="prodcode" id="jproductcode08">YF208</p>
+						<img class="displayimgshop" src="products/YF208/1.jpg" id="fvproda08" width="60%"></img>
+						<img class="displayimgshop" src="products/YF208/2.jpg" id="fvprodb08" width="60%" style="display:none"></img>
+						
+						<div>
+							<button class="prodnavbutton" onclick="navprod1('fvproda08','fvprodb08');"> ◁ </button>
+							<button class="prodnavbutton" onclick="navprod2('fvproda08','fvprodb08');"> ▷ </button>
+						</div>
+						<br>
+						
+						<button class="cartbutton" onclick="on();Loaddesc('YF208','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+						
+						
+					</div>
+					<div class="shopcolumn">
+					
+						<h3 class="headprod" id="jproductname09">Sprouted Weight Loss Healthmix</h3>
+						<p class="prodcode" id="jproductcode09">YF209</p>
+						<img class="displayimgshop" src="products/YF209/1.jpg" id="fvproda09" width="60%"></img>
+						<img class="displayimgshop" src="products/YF209/2.jpg" id="fvprodb09" width="60%" style="display:none"></img>
+						
+						<div>
+							<button class="prodnavbutton" onclick="navprod1('fvproda09','fvprodb09');"> ◁ </button>
+							<button class="prodnavbutton" onclick="navprod2('fvproda09','fvprodb09');"> ▷ </button>
+						</div>
+						<br>
+						
+						<button class="cartbutton" onclick="on();Loaddesc('YF209','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+						
+						
+					</div>
+					<div class="shopcolumn">
+					
+						<h3 class="headprod" id="jproductname10">Blackgram Flour</h3>
+						<p class="prodcode" id="jproductcode10">YF210</p>
+						<img class="displayimgshop" src="products/YF210/1.jpg" id="fvproda10" width="60%"></img>
+						<img class="displayimgshop" src="products/YF210/2.jpg" id="fvprodb10" width="60%" style="display:none"></img>
+						
+						<div>
+							<button class="prodnavbutton" onclick="navprod1('fvproda10','fvprodb10');"> ◁ </button>
+							<button class="prodnavbutton" onclick="navprod2('fvproda10','fvprodb10');"> ▷ </button>
+						</div>
+						<br>
+						
+						<button class="cartbutton" onclick="on();Loaddesc('YF210','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+						
+						
+					</div>
+					
+					</div>
+				</div>
+		</div>
+		<div id="organicitems" style="display:none">
+			<h3 style="font-family:century Gothic;background-color:lightblue;text-align:center;box-shadow: 1px 1px 8px green;cursor:pointer;padding:5px;" onclick="organic()">Organic Essentials ▽</h3>
+			<div id="organicessentials" style="display:none">
+				<div class="shoprow">
+			
+					<div class="shopcolumn">
+					
+						<h3 class="headprod" id="jproductname01">Muligai Palpodi</h3>
+						<p class="prodcode" id="jproductcode01">YO101</p>
+						<img class="displayimgshop" src="products/YO101/1.jpg" id="yoproda01" width="60%"></img>
+						<img class="displayimgshop" src="products/YO101/2.jpg" id="yoprodb01" width="60%" style="display:none"></img>
+						
+						<div>
+							<button class="prodnavbutton" onclick="navprod1('yoproda01','yoprodb01');"> ◁ </button>
+							<button class="prodnavbutton" onclick="navprod2('yoproda01','yoprodb01');"> ▷ </button>
+						</div>
+						<br>
+						
+						<button class="cartbutton" onclick="on();Loaddesc('YO101','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+						
+					</div>
+					
+					<div class="shopcolumn">
+					
+						<h3 class="headprod" id="jproductname02">Bamboo tooth brush</h3>
+						<p class="prodcode" id="jproductcode02">YO102</p>
+						<img class="displayimgshop" src="products/YO102/1.jpg" id="yoproda02" width="60%"></img>
+						<img class="displayimgshop" src="products/YO102/2.jpg" id="yoprodb02" width="60%" style="display:none"></img>
+						
+						<div>
+							<button class="prodnavbutton" onclick="navprod1('yoproda02','yoprodb02');"> ◁ </button>
+							<button class="prodnavbutton" onclick="navprod2('yoproda02','yoprodb02');"> ▷ </button>
+						</div>
+						<br>
+						
+						<button class="cartbutton" onclick="on();Loaddesc('YO102','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+						
+						
+					</div>
+					
+					<div class="shopcolumn">
+					
+						<h3 class="headprod" id="jproductname03">Natural Soap-Charcoal</h3>
+						<p class="prodcode" id="jproductcode03">YO103</p>
+						<img class="displayimgshop" src="products/YO103/1.jpg" id="yoproda03" width="60%"></img>
+						<img class="displayimgshop" src="products/YO103/2.jpg" id="yoprodb03" width="60%" style="display:none"></img>
+						
+						<div>
+							<button class="prodnavbutton" onclick="navprod1('yoproda03','yoprodb03');"> ◁ </button>
+							<button class="prodnavbutton" onclick="navprod2('yoproda03','yoprodb03');"> ▷ </button>
+						</div>
+						<br>
+						
+						<button class="cartbutton" onclick="on();Loaddesc('YO103','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+						
+					</div>
+					
+					<div class="shopcolumn">
+					
+						<h3 class="headprod" id="jproductname04">Natural Soap-Neem</h3>
+						<p class="prodcode" id="jproductcode04">YO104</p>
+						<img class="displayimgshop" src="products/YO104/1.jpg" id="yoproda04" width="60%"></img>
+						<img class="displayimgshop" src="products/YO104/2.jpg" id="yoprodb04" width="60%" style="display:none"></img>
+						
+						<div>
+							<button class="prodnavbutton" onclick="navprod1('yoproda04','yoprodb04');"> ◁ </button>
+							<button class="prodnavbutton" onclick="navprod2('yoproda04','yoprodb04');"> ▷ </button>
+						</div>
+						<br>
+						
+						<button class="cartbutton" onclick="on();Loaddesc('YO104','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+						
+					</div>
+					
+					<div class="shopcolumn">
+					
+						<h3 class="headprod" id="jproductname05">Natural Soap- Multhanimatti</h3>
+						<p class="prodcode" id="jproductcode05">YO105</p>
+						<img class="displayimgshop" src="products/YO105/1.jpg" id="yoproda05" width="60%"></img>
+						<img class="displayimgshop" src="products/YO105/2.jpg" id="yoprodb05" width="60%" style="display:none"></img>
+						
+						<div>
+							<button class="prodnavbutton" onclick="navprod1('yoproda05','yoprodb05');"> ◁ </button>
+							<button class="prodnavbutton" onclick="navprod2('yoproda05','yoprodb05');"> ▷ </button>
+						</div>
+						<br>
+						
+						<button class="cartbutton" onclick="on();Loaddesc('YO105','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+						
+					</div>
+					
+					<div class="shopcolumn">
+					
+						<h3 class="headprod" id="jproductname06">Natural Soap- Aloevera</h3>
+						<p class="prodcode" id="jproductcode06">YO106</p>
+						<img class="displayimgshop" src="products/YO106/1.jpg" id="yoproda06" width="60%"></img>
+						<img class="displayimgshop" src="products/YO106/2.jpg" id="yoprodb06" width="60%" style="display:none"></img>
+						
+						<div>
+							<button class="prodnavbutton" onclick="navprod1('yoproda06','yoprodb06');"> ◁ </button>
+							<button class="prodnavbutton" onclick="navprod2('yoproda06','yoprodb06');"> ▷ </button>
+						</div>
+						<br>
+						
+						
+						<button class="cartbutton" onclick="on();Loaddesc('YO106','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+						
+					</div>
+					
+					<div class="shopcolumn">
+					
+						<h3 class="headprod" id="jproductname07">Natural Soap- Vettiver</h3>
+						<p class="prodcode" id="jproductcode07">YO107</p>
+						<img class="displayimgshop" src="products/YO107/1.jpg" id="yoproda07" width="60%"></img>
+						<img class="displayimgshop" src="products/YO107/2.jpg" id="yoprodb07" width="60%" style="display:none"></img>
+						
+						<div>
+							<button class="prodnavbutton" onclick="navprod1('yoproda07','yoprodb07');"> ◁ </button>
+							<button class="prodnavbutton" onclick="navprod2('yoproda07','yoprodb07');"> ▷ </button>
+						</div>
+						<br>
+						
+						<button class="cartbutton" onclick="on();Loaddesc('YO107','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+						
+					</div>
+					
+					<div class="shopcolumn">
+					
+						<h3 class="headprod" id="jproductname08">Natural Mosquito Sticks</h3>
+						<p class="prodcode" id="jproductcode08">YO108</p>
+						<img class="displayimgshop" src="products/YO108/1.jpg" id="yoproda08" width="60%"></img>
+						<img class="displayimgshop" src="products/YO108/2.jpg" id="yoprodb08" width="60%" style="display:none"></img>
+						
+						<div>
+							<button class="prodnavbutton" onclick="navprod1('yoproda08','yoprodb08');"> ◁ </button>
+							<button class="prodnavbutton" onclick="navprod2('yoproda08','yoprodb08');"> ▷ </button>
+						</div>
+						<br>
+						
+						<button class="cartbutton" onclick="on();Loaddesc('YO108','rgba(191,239,255,0.97)');disableScroll()">View Details</button>
+						
+						
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		
+		
+		<script src="js/lockscroll.js"></script>
+		
+		<div id="overlay">
+			
+			<p class="closeoverlay" id="closeoverlaylink" style="display:inline;font-size:30px;text-align:center;"  onclick="off();"><a id="closenavlink">✖</a></p>
+			
+			<div style="font-family:century gothic;">
+				<h4 class="headprod" id="pname"></h4>
+				<span class="prodcode" id="pcode"></span>
+				<a href="https://yukthimart.com" id="whatsid" target="_top" style="margin-left:20px">SHARE <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="images/icon/share.png"  height='30px' width='30px' ></a>
+				<!-- <a href="https://yukthimart.com" id="whatsid" target="_top"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="images/icon/whatsappshare.png"  height='30px' style="border-radius:10px;"></a> -->
+				
+			<br>	
+			<div class="overlayimg2" id="mainoverlayimg" style="display:none">
+				<img src="products/YW101/1.jpg" id="prodimg1" class="prodimgo" style="display:none"></img>
+				<img src="products/YW101/2.jpg" id="prodimg2" class="prodimgo" style="display:none"></img>
+				<p class="closeimgoverlay" id="closeimg" style = "display:none" onclick="prodsj2()">✖</a>
+			</div>
+
+			<div style="margin-top:5px;">
+				<img src="products/YW101/1.jpg" id="prodimgsmall1" class="prodimgdispsmall" style="opacity:1" onclick="prod1js2()"></img>
+				<img src="products/YW101/2.jpg" id="prodimgsmall2" class="prodimgdispsmall" style="opacity:0.7" onclick="prod2js2()"></img>
+			</div>
+			<br>
+			<button class="pricetag" id="pricedisplay" value="1">1</button>
+			<button class="cartbutton1"  id="addcartclick" onclick="addtocart('pname','pcode','valsize','buttoncp1','buttoncp2','buttoncp3','prodqty2','pricedisplay');itemadd();">Add To Cart 🛒</button>
+			<br><br>
+			<h4 style="" class="maincategory" onclick="proddescp()">Product Description ▽</h4>
+			<p class="pdesc1" id="pdesc" style="display:block"></p>
+			
+			
+			<button id="getselectcust" value="1" style="display:none"></button>
+			
+<!-- 			<h4 style="font-family:century Gothic;background-color:#0060B6;text-align:center;box-shadow: 1px 1px 8px lightblue;cursor:pointer;padding:5px;color:white;margin:4px 0 0 0;" onclick="defcust()">Default Customization ▽</h4>
+			
+		-->	<div  id="lockclick"> 
+			
+				<div class="row25" id="sizequan">
+					<div class="column25a" id="dummywidth">
+						<div style="width:25%"></div>
+					</div>
+						<!-- <div class="column25a">
+							<h3>Size Variant</h3>
+							
+								<button id="ssize" class="sizeoverlay" style="opacity:1;border:2px solid black" onclick="prodsizes()">S</button>
+								<button id="msize" class="sizeoverlay" onclick="prodsizem()">M</button>
+								<button id="lsize" class="sizeoverlay" onclick="prodsizel()">L</button>
+								<button id="valsize" style="display:none" value="S"></button>
+								
+						</div> -->
+						<div class="column25a">
+							<h3>Size Variant</h3>
+							<div id="sizecombo">
+								<button id="ssize" class="sizeoverlay" style="opacity:1;border:2px solid black" onclick="prodsizes()">S</button>
+								<button id="msize" class="sizeoverlay" onclick="prodsizem()">M</button>
+								<button id="lsize" class="sizeoverlay" onclick="prodsizel()">L</button>
+								<button id="valsize" style="display:none" value="S"></button>
+							</div>	
+						</div>
+						<div class="column25a">
+							
+							<h3>Quantity</h3>
+							<input type="text" id="prodprice2" class="prodpricecss" value="7000"></input>
+							<button class="incbutton" onclick="qtydec('prodqty2','prodprice2',2);">-</button>
+							<input type="number" id="prodqty2" class="prodqtycss" value=1 disabled></input>
+							<button class="incbutton" onclick="qtyinc('prodqty2','prodprice2',2);">+</button>
+						</div>
+					<div class="column25a" id="dummywidth">
+						<div style="width:25%"></div>
+					</div>
+				</div>
+				<p id="sizedesc" style="font-size:12px"></p>
+				<p id="ssizedesc" style="font-size:12px;display:none"></p>
+				<p id="msizedesc" style="font-size:12px;display:none"></p>
+				<p id="lsizedesc" style="font-size:12px;display:none"></p>
+			<!-- <h3>Colour Pattern</h3>
+			
+				<button id="scolor" class="sizeoverlay1" style="opacity:1;border:2px solid black" onclick="prodcolors()">Red</button>
+				<button id="mcolor" class="sizeoverlay1" onclick="prodcolorm()">Yellow</button>
+				<button id="lcolor" class="sizeoverlay1 " onclick="prodcolorl()">Blue</button>
+				<button id="valcolor" style="display:none" value="Red + White + Green"></button>
+			<br><br>
+			 -->
+			
+				<h3 style="margin:0 0 5px 0;">Colour Pattern</h3>
+				
+				<!-- <select name="Select1" id="colorp1" class="colorp">
+					<option>No COLOR</option>
+					<option style="color:white;background-color:Orange">Orange<span style="width:10px; height:10px;background-color:brown;"></span></option>
+					<option style="color:white;background-color:Red">Red</option>
+					<option style="color:white;background-color:Blue">Blue</option>
+					<option style="color:white;background-color:#064E40">BlueGreen</option>
+					<option style="color:white;background-color:Magenta">Magenta</option>
+					<option style="color:black;background-color:#FFE5B4">Peach</option>
+					<option style="color:white;background-color:Black">Black</option>
+					<option style="color:black;background-color:Yellow">Yellow</option>
+					<option style="color:white;background-color:LightGreen">Light Green</option>
+					<option style="color:white;background-color:DarkGreen">Dark Green</option>
+					<option style="color:white;background-color:Maroon">Maroon</option>
+					<option style="color:Black;background-color:White">White</option>
+					<option style="color:white;background-color:Pink">Pink</option>
+					<option style="color:white;background-color:Brown">Brown</option>
+					<option style="color:white;background-color:#FFD700">Golden</option>
+				</select>
+				
+				<select name="Select1" id="colorp2" class="colorp">
+					<option>No COLOR</option>
+					<option style="color:white;background-color:Orange">Orange</option>
+					<option style="color:white;background-color:Red">Red</option>
+					<option style="color:white;background-color:Blue">Blue</option>
+					<option style="color:white;background-color:#064E40">BlueGreen</option>
+					<option style="color:white;background-color:Magenta">Magenta</option>
+					<option style="color:black;background-color:#FFE5B4">Peach</option>
+					<option style="color:white;background-color:Black">Black</option>
+					<option style="color:black;background-color:Yellow">Yellow</option>
+					<option style="color:white;background-color:LightGreen">Light Green</option>
+					<option style="color:white;background-color:DarkGreen">Dark Green</option>
+					<option style="color:white;background-color:Maroon">Maroon</option>
+					<option style="color:Black;background-color:White">White</option>
+					<option style="color:white;background-color:Pink">Pink</option>
+					<option style="color:white;background-color:Brown">Brown</option>
+					<option style="color:white;background-color:#FFD700">Golden</option>
+				</select>
+				
+				<select name="Select1" id="colorp3" class="colorp">
+					<option>No COLOR</option>
+					<option style="color:white;background-color:Orange">Orange</option>
+					<option style="color:white;background-color:Red">Red</option>
+					<option style="color:white;background-color:Blue">Blue</option>
+					<option style="color:white;background-color:#064E40">BlueGreen</option>
+					<option style="color:white;background-color:Magenta">Magenta</option>
+					<option style="color:black;background-color:#FFE5B4">Peach</option>
+					<option style="color:white;background-color:Black">Black</option>
+					<option style="color:black;background-color:Yellow">Yellow</option>
+					<option style="color:white;background-color:LightGreen">Light Green</option>
+					<option style="color:white;background-color:DarkGreen">Dark Green</option>
+					<option style="color:white;background-color:Maroon">Maroon</option>
+					<option style="color:Black;background-color:White">White</option>
+					<option style="color:white;background-color:Pink">Pink</option>
+					<option style="color:white;background-color:Brown">Brown</option>
+					<option style="color:white;background-color:#FFD700">Golden</option>
+				</select> -->
+				
+				<div id="colorcombo">
+					<button id="buttoncp1" onclick="colorpick('colorp1')" value="Red">Red</button>
+					<button id="buttoncp2" onclick="colorpick('colorp2')" value="Green">Green</button>
+					<button id="buttoncp3" onclick="colorpick('colorp3')" value="White">White</button>
+				
+					<div class="card" id="colorp1" style="display:none">
+						<ul>
+							<li class="color-items cporange"    onclick="colorsel('buttoncp1','colorp1','Orange')"    id="cp1orange"></li>
+							<li class="color-items cpred"       onclick="colorsel('buttoncp1','colorp1','Red')"       id="cp1red"></li>
+							<li class="color-items cpblue"      onclick="colorsel('buttoncp1','colorp1','Blue')"      id="cp1blue"></li>
+							<li class="color-items cpbluegreen" onclick="colorsel('buttoncp1','colorp1','BlueGreen')" id="cp1bluegreen"></li>
+							<li class="color-items cpmagenta"   onclick="colorsel('buttoncp1','colorp1','Magenta')"   id="cp1magenta"></li>
+							<li class="color-items cppeach"     onclick="colorsel('buttoncp1','colorp1','Peach')"     id="cp1peach"></li>
+							<li class="color-items cpblack"     onclick="colorsel('buttoncp1','colorp1','Black')"     id="cp1black"></li>
+							<li class="color-items cpyellow"    onclick="colorsel('buttoncp1','colorp1','Yellow')"    id="cp1yellow"></li>
+						</ul>
+						<ul>
+							<li class="color-items cplightgreen" onclick="colorsel('buttoncp1','colorp1','LightGreen')" id="cp1lightgreen"></li>
+							<li class="color-items cpdarkgreen"  onclick="colorsel('buttoncp1','colorp1','DarkGreen')"  id="cp1darkgreen"></li>
+							<li class="color-items cpmaroon"     onclick="colorsel('buttoncp1','colorp1','Maroon')"     id="cp1maroon"></li>
+							<li class="color-items cpwhite"      onclick="colorsel('buttoncp1','colorp1','White')"      id="cp1white"></li>
+							<li class="color-items cppink"       onclick="colorsel('buttoncp1','colorp1','Pink')"       id="cp1pink"></li>
+							<li class="color-items cpbrown"      onclick="colorsel('buttoncp1','colorp1','Brown')"      id="cp1brown"></li>
+							<li class="color-items cpgolden"     onclick="colorsel('buttoncp1','colorp1','Golden')"     id="cp1golden"></li>
+						</ul>                       
+					</div>
+					<div class="card" id="colorp2" style="display:none">
+						<ul>
+							<li class="color-items cporange"    onclick="colorsel('buttoncp2','colorp2','Orange')"   id="cp2orange"></li>
+							<li class="color-items cpred"       onclick="colorsel('buttoncp2','colorp2','Red')"      id="cp2red"></li>
+							<li class="color-items cpblue"      onclick="colorsel('buttoncp2','colorp2','Blue')"     id="cp2blue"></li>
+							<li class="color-items cpbluegreen" onclick="colorsel('buttoncp2','colorp2','BlueGreen')" id="cp2bluegreen"></li>
+							<li class="color-items cpmagenta"   onclick="colorsel('buttoncp2','colorp2','Magenta')"  id="cp2magenta"></li>
+							<li class="color-items cppeach"     onclick="colorsel('buttoncp2','colorp2','Peach')"    id="cp2peach"></li>
+							<li class="color-items cpblack"     onclick="colorsel('buttoncp2','colorp2','Black')"    id="cp2black"></li>
+							<li class="color-items cpyellow"    onclick="colorsel('buttoncp2','colorp2','Yellow')"   id="cp2yellow"></li>
+						</ul>
+						<ul>
+							<li class="color-items cplightgreen" onclick="colorsel('buttoncp2','colorp2','LightGreen')"id="cp2lightgreen"></li>
+							<li class="color-items cpdarkgreen"  onclick="colorsel('buttoncp2','colorp2','DarkGreen')" id="cp2darkgreen"></li>
+							<li class="color-items cpmaroon"     onclick="colorsel('buttoncp2','colorp2','Maroon')"    id="cp2maroon"></li>
+							<li class="color-items cpwhite"      onclick="colorsel('buttoncp2','colorp2','White')"     id="cp2white"></li>
+							<li class="color-items cppink"       onclick="colorsel('buttoncp2','colorp2','Pink')"      id="cp2pink"></li>
+							<li class="color-items cpbrown"      onclick="colorsel('buttoncp2','colorp2','Brown')"     id="cp2brown"></li>
+							<li class="color-items cpgolden"     onclick="colorsel('buttoncp2','colorp2','Golden')"    id="cp2golden"></li>
+						</ul>
+					</div>
+					<div class="card" id="colorp3" style="display:none">
+						<ul>
+							<li class="color-items cporange"    onclick="colorsel('buttoncp3','colorp3','Orange')"   id="cp3orange"></li>
+							<li class="color-items cpred"       onclick="colorsel('buttoncp3','colorp3','Red')"      id="cp3red"></li>
+							<li class="color-items cpblue"      onclick="colorsel('buttoncp3','colorp3','Blue')"     id="cp3blue"></li>
+							<li class="color-items cpbluegreen" onclick="colorsel('buttoncp3','colorp3','BlueGreen')"id="cp3bluegreen"></li>
+							<li class="color-items cpmagenta"   onclick="colorsel('buttoncp3','colorp3','Magenta')"  id="cp3magenta"></li>
+							<li class="color-items cppeach"     onclick="colorsel('buttoncp3','colorp3','Peach')"    id="cp3peach"></li>
+							<li class="color-items cpblack"     onclick="colorsel('buttoncp3','colorp3','Black')"    id="cp3black"></li>
+							<li class="color-items cpyellow"    onclick="colorsel('buttoncp3','colorp3','Yellow')"   id="cp3yellow"></li>
+						</ul>
+						<ul>
+							<li class="color-items cplightgreen" onclick="colorsel('buttoncp3','colorp3','LightGreen')"id="cp3lightgreen"></li>
+							<li class="color-items cpdarkgreen"  onclick="colorsel('buttoncp3','colorp3','DarkGreen')" id="cp3darkgreen"></li>
+							<li class="color-items cpmaroon"     onclick="colorsel('buttoncp3','colorp3','Maroon')"    id="cp3maroon"></li>
+							<li class="color-items cpwhite"      onclick="colorsel('buttoncp3','colorp3','White')"     id="cp3white"></li>
+							<li class="color-items cppink"       onclick="colorsel('buttoncp3','colorp3','Pink')"      id="cp3pink"></li>
+							<li class="color-items cpbrown"      onclick="colorsel('buttoncp3','colorp3','Brown')"     id="cp3brown"></li>
+							<li class="color-items cpgolden"     onclick="colorsel('buttoncp3','colorp3','Golden')"    id="cp3golden"></li>
+						</ul>                                        
+					</div>
+					<br><br>
+				</div>
+			</div>
+			
+			<!--<h3>Additional Features</h3>
+			
+			 <p id="af1"></p>
+			<p id="af2"></p>
+			<p id="af3"></p> -->
+
+			</div>
+		
+		<h4 id="ManualCust" class="maincategory" onclick="alert('You are trying personalized the product based on your wish. The Pricing and shipping time may vary.');mancust()">Manual Customization ▽</h4>
+		
+		<div id="mancust1"  style="display:none">
+		<input type="text" class="manualbox" placeholder="Please Tell us how you want your product" id="manualcustval"></input>
+		</div>
+		
+		
+		</div>
+		
+		</center>
+		
+		<br><br><br>
+		<!--bottom social media-->
+		
+		<center><div style="bottom:0;position:fixed; width:100%;">
+		<a href="tel:+919080098373"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="images/icon/phone.png" width='40px', height='40px' style="opacity:0.5"></a>
+		<a href="https://www.instagram.com/yukthimart/" target="_blank"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="images/icon/insta.png" width='40px', height='40px' style="opacity:0.5"></a>
+		<a href="https://api.whatsapp.com/send?phone=919080098373&text=Hi%20I%20Would%20like%20to%20buy%20your%20product" target="_top"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="images/icon/wa.png" width='50px', height='50px' style="opacity:0.5"></a>
+		</div></center>
+		<script>
+		function bigImg(x) {
+		  x.style.height = "60px";
+		  x.style.width = "60px";
+		  x.style.opacity = "1";
+		}
+
+		function normalImg(x) {
+		  x.style.height = "40px";
+		  x.style.width = "40px";
+		  x.style.opacity = "0.5";
+		}
+		</script>
+		
+		<!--ends here-->
+		
+		<a href="#" class="backtotop" style="display:inline;font-size:45px;text-align:center;">⇧</a>
+	</body>
+	
+</html>

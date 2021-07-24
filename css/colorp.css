@@ -1,0 +1,104 @@
+.card{
+	background-color:cadetblue;
+	border-radius:4px;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+	padding:2px;
+	width:25%;
+}
+ul{
+list-style:none;
+padding:2px;
+display:grid;
+grid-template-columns:repeat(8, 1fr);
+grid-gap:20px;
+margin:0;
+}
+
+ul li{
+width:20px;
+height:20px;
+background-color:red;
+cursor:pointer;
+border-radius:50%;
+transition:transform 0.3s;
+}
+ul li:hover{
+transform:scale(1.1);
+}
+.cporange
+{
+background-color:orange;
+}
+.cpred
+{
+background-color:red;
+}
+.cpblue
+{
+background-color:blue;
+}
+.cpbluegreen
+{
+background-color:#064E40;
+}
+.cpmagenta
+{
+background-color:magenta;
+}
+.cppeach
+{
+background-color:#FFE5B4;
+}
+.cpblack
+{
+background-color:black;
+}
+.cpyellow
+{
+background-color:yellow;
+}
+.cplightgreen
+{
+background-color:lightgreen;
+}
+.cpdarkgreen
+{
+background-color:darkgreen;
+}
+.cpmaroon
+{
+background-color:maroon;
+}
+.cpwhite
+{
+background-color:white;
+}
+.cppink
+{
+background-color:pink;
+}
+.cpbrown
+{
+background-color:brown;
+}
+.cpgolden
+{
+background-color:#FFD700;
+}
+@media screen and (max-width: 600px) {
+.card
+{
+	width:100% !important;
+}
+
+}
+@media screen and (max-width: 1240px) {
+.card
+{
+	width:60%;
+}
+
+}

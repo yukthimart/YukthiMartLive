@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+}
+.row
+{
+	background-color:#e18daf;
+	color:white;
+}
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 20%;
+  padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+  .rowimg
+  {
+	  width:50%;
+  }
+
+.row25
+{
+	/*background-color:#e18daf;
+	color:white;*/
+	
+}
+/* Create two equal columns that floats next to each other */
+.column25 {
+  float: left;
+  width: 50%;
+  padding-left:7%;
+  padding-right:7%;
+	font-family:century gothic;
+	
+}
+.column50 {
+ float: left;
+  width: 50%;
+  padding-left:7%;
+  padding-right:7%;
+	font-family:century gothic;
+	font-size:11px;
+	margin-top:10px;
+}
+.columnkal {
+ float: left;
+  width: 25%;
+  padding-left:7%;
+  padding-right:7%;
+	font-family:century gothic;
+	font-size:11px;
+	margin-top:5px;
+}
+.displayimgshop
+{
+ height:300px;
+}
+
+.buttonshop
+{
+width:100%;
+background-color:#00203F;
+font-size:14px;
+padding:10px;
+color:white;
+box-shadow: 0 4px 8px 0 blue, 0 6px 20px 0 rgba(0, 0, 0, 0.04);
+}
+
+/* Clear floats after the columns */
+.row25:after {
+  content: "";
+  display: table;
+  clear: both;
+  
+}
+  .rowimg
+  {
+	  width:50%;
+  }
+.rowimg25
+  {
+	  width:7.5%;
+	 
+  }
+
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+	width: 20%;
+  }
+  .column25 {
+	width: 100%;
+	padding-left:7%;
+	padding-right:7%;
+	text-align:justify;
+
+  }
+    .column50 {
+	width: 50%;
+	padding-left:7%;
+	padding-right:7%;
+	/*text-align:justify;*/
+	margin-top:10px;
+
+  }
+  
+      .columnkal {
+	width: 25%;
+	padding-left:7%;
+	padding-right:7%;
+	/*text-align:justify;*/
+	margin-top:10px;
+
+  }
+  .row{
+  font-size:9px;
+  }
+  .row25{
+  font-size:16px;
+  }
+  .rowimg
+  {
+	  width:85%;
+  }
+  .rowimg25
+  {
+	  width:28%;
+  }
+
+.buttonshop
+{
+width:100%;
+background-color:#00203F;
+font-size:10px;
+padding:10px;
+color:white;
+box-shadow: 0 4px 8px 0 blue, 0 6px 20px 0 rgba(0, 0, 0, 0.04);
+}
+}
