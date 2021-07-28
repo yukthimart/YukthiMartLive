@@ -86,6 +86,12 @@ font-size:12px;
 	box-shadow: 0 4px 8px 0 blue, 0 6px 20px 0 rgba(0, 0, 0, 0.04);
 	justify-content:center;
 }
+.disclaimertxt
+{
+	font-size:16px;
+	text-align:center;
+	color:red;
+}
 .imgbutton{
 	width:20%;
 }
@@ -430,5 +436,11 @@ height:70%;
 }
 .manualbox{
 width: 100%;
+}
+.disclaimertxt
+{
+	font-size:12px;
+	text-align:left;
+	color:red;
 }
 }
