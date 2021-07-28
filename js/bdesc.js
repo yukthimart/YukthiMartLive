@@ -283,7 +283,12 @@ function Loaddesc(getid,getcolor)
 	document.getElementById("addcartclick").innerHTML = "Add to Cart";
 	document.getElementById("ManualCust").style.pointerEvents = "auto";
 	document.getElementById("ManualCust").style.backgroundColor = "#0060B6";
+	document.getElementById("manualcustval").value = "";
+	document.getElementById("colorp1").style.display = "none";
+	document.getElementById("colorp2").style.display = "none";
+	document.getElementById("colorp3").style.display = "none";
 	document.getElementById("ManualCust").innerHTML = "User Customization ▽";
+
 
 	if (getid == "YW101")
 	{
@@ -838,10 +843,10 @@ function Loaddesc(getid,getcolor)
 	}
 	if (getid == "YA101")
 	{
-		var bdesc = "The stud is made of German Silver in Flower shape which is eco-friendly and gives a new sense of fashion style to use. ";
-		var bpnpc = {pn:"Canvas 1", pc:"YA101"};
-		var sized = ["height 2.5 inch","height 2.5 inch","height 2.5 inch"];
-		var price = [80,80,80];
+		var bdesc = "High Quality Painting of nature for a mesmerizing visual experience. Perfect for living room, bedroom, kitchen, office, Hotel, dining room etc. Must be protected from sunlight, extreme temperature, dust and moisture to ensure long life";
+		var bpnpc = {pn:"Nature Canvas Wall Art Poster", pc:"YA101"};
+		var sized = ["","",""];
+		var price = [2200,2200,2200];
 		var defcolor = ["-","-","-"];
 		document.getElementById("whatsid").href = "https://api.whatsapp.com/send?text=https%3A%2F%2Fyukthimart.com%2Fshop.html%3FYA101";
 		window.history.pushState({"html":"","pageTitle":""},"", '?YA101');
@@ -857,10 +862,10 @@ function Loaddesc(getid,getcolor)
 	}
 	if (getid == "YA102")
 	{
-		var bdesc = "The stud is made of German Silver in Flower shape which is eco-friendly and gives a new sense of fashion style to use. ";
-		var bpnpc = {pn:"German silver element – The Flower", pc:"YA102"};
-		var sized = ["height 2.5 inch","height 2.5 inch","height 2.5 inch"];
-		var price = [80,80,80];
+		var bdesc = "A flower on Canvas with the quiet beauty is a gesture of rememberance, traditionally also associated with marriages and new beginnings.  Perfect for living room, bedroom, kitchen, office, Hotel, dining room etc. Must be protected from sunlight, extreme temperature, dust and moisture to ensure long life";
+		var bpnpc = {pn:"Flower Canvas Art Poster", pc:"YA102"};
+		var sized = ["","",""];
+		var price = [900,900,900];
 		var defcolor = ["-","-","-"];
 		document.getElementById("whatsid").href = "https://api.whatsapp.com/send?text=https%3A%2F%2Fyukthimart.com%2Fshop.html%3FYA102";
 		window.history.pushState({"html":"","pageTitle":""},"", '?YA102');
@@ -876,10 +881,10 @@ function Loaddesc(getid,getcolor)
 	}
 	if (getid == "YA103")
 	{
-		var bdesc = "The stud is made of German Silver in Flower shape which is eco-friendly and gives a new sense of fashion style to use. ";
-		var bpnpc = {pn:"German silver element – The Flower", pc:"YA103"};
-		var sized = ["height 2.5 inch","height 2.5 inch","height 2.5 inch"];
-		var price = [80,80,80];
+		var bdesc = "High Quality Painting of mountain and green for a mesmerizing visual experience. Perfect for living room, bedroom, kitchen, office, Hotel, dining room etc. Must be protected from sunlight, extreme temperature, dust and moisture to ensure long life";
+		var bpnpc = {pn:"Mountain Canvas Art", pc:"YA103"};
+		var sized = ["","",""];
+		var price = [900,900,900];
 		var defcolor = ["-","-","-"];
 		document.getElementById("whatsid").href = "https://api.whatsapp.com/send?text=https%3A%2F%2Fyukthimart.com%2Fshop.html%3FYA103";
 		window.history.pushState({"html":"","pageTitle":""},"", '?YA103');
@@ -895,10 +900,10 @@ function Loaddesc(getid,getcolor)
 	}
 	if (getid == "YA104")
 	{
-		var bdesc = "The stud is made of German Silver in Flower shape which is eco-friendly and gives a new sense of fashion style to use. ";
-		var bpnpc = {pn:"German silver element – The Flower", pc:"YA104"};
-		var sized = ["height 2.5 inch","height 2.5 inch","height 2.5 inch"];
-		var price = [80,80,80];
+		var bdesc = "A beautiful art of a women face in canvas sheet. Perfect for living room, bedroom, kitchen, office, Hotel, dining room etc. Must be protected from sunlight, extreme temperature, dust and moisture to ensure long life";
+		var bpnpc = {pn:"Women face Canvas Art 1", pc:"YA104"};
+		var sized = ["","",""];
+		var price = [900,900,900];
 		var defcolor = ["-","-","-"];
 		document.getElementById("whatsid").href = "https://api.whatsapp.com/send?text=https%3A%2F%2Fyukthimart.com%2Fshop.html%3FYA104";
 		window.history.pushState({"html":"","pageTitle":""},"", '?YA104');
@@ -914,10 +919,10 @@ function Loaddesc(getid,getcolor)
 	}
 	if (getid == "YA105")
 	{
-		var bdesc = "The stud is made of German Silver in Flower shape which is eco-friendly and gives a new sense of fashion style to use. ";
-		var bpnpc = {pn:"German silver element – The Flower", pc:"YA105"};
-		var sized = ["height 2.5 inch","height 2.5 inch","height 2.5 inch"];
-		var price = [80,80,80];
+		var bdesc = "A beautiful art of a women face in canvas sheet. Perfect for living room, bedroom, kitchen, office, Hotel, dining room etc. Must be protected from sunlight, extreme temperature, dust and moisture to ensure long life";
+		var bpnpc = {pn:"Women face Canvas Art 2", pc:"YA105"};
+		var sized = ["","",""];
+		var price = [900,900,900];
 		var defcolor = ["-","-","-"];
 		document.getElementById("whatsid").href = "https://api.whatsapp.com/send?text=https%3A%2F%2Fyukthimart.com%2Fshop.html%3FYA105";
 		window.history.pushState({"html":"","pageTitle":""},"", '?YA105');
@@ -933,10 +938,10 @@ function Loaddesc(getid,getcolor)
 	}
 	if (getid == "YA106")
 	{
-		var bdesc = "The stud is made of German Silver in Flower shape which is eco-friendly and gives a new sense of fashion style to use. ";
-		var bpnpc = {pn:"German silver element – The Flower", pc:"YA106"};
-		var sized = ["height 2.5 inch","height 2.5 inch","height 2.5 inch"];
-		var price = [80,80,80];
+		var bdesc = "A beautiful art of a women in canvas sheet. Perfect for living room, bedroom, kitchen, office, Hotel, dining room etc. Must be protected from sunlight, extreme temperature, dust and moisture to ensure long life";
+		var bpnpc = {pn:"Women Canvas Art", pc:"YA106"};
+		var sized = ["","",""];
+		var price = [900,900,900];
 		var defcolor = ["-","-","-"];
 		document.getElementById("whatsid").href = "https://api.whatsapp.com/send?text=https%3A%2F%2Fyukthimart.com%2Fshop.html%3FYA106";
 		window.history.pushState({"html":"","pageTitle":""},"", '?YA106');
@@ -952,10 +957,10 @@ function Loaddesc(getid,getcolor)
 	}
 	if (getid == "YA107")
 	{
-		var bdesc = "The stud is made of German Silver in Flower shape which is eco-friendly and gives a new sense of fashion style to use. ";
-		var bpnpc = {pn:"German silver element – The Flower", pc:"YA107"};
-		var sized = ["height 2.5 inch","height 2.5 inch","height 2.5 inch"];
-		var price = [80,80,80];
+		var bdesc = "A modern art on canvas using acrylic painting. Perfect for living room, bedroom, kitchen, office, Hotel, dining room etc. Must be protected from sunlight, extreme temperature, dust and moisture to ensure long life";
+		var bpnpc = {pn:"Modern Art Canvas Poster", pc:"YA107"};
+		var sized = ["","",""];
+		var price = [900,900,900];
 		var defcolor = ["-","-","-"];
 		document.getElementById("whatsid").href = "https://api.whatsapp.com/send?text=https%3A%2F%2Fyukthimart.com%2Fshop.html%3FYA107";
 		window.history.pushState({"html":"","pageTitle":""},"", '?YA107');
@@ -970,10 +975,10 @@ function Loaddesc(getid,getcolor)
 	}
 	if (getid == "YA108")
 	{
-		var bdesc = "The stud is made of German Silver in Flower shape which is eco-friendly and gives a new sense of fashion style to use. ";
-		var bpnpc = {pn:"German silver element – The Flower", pc:"YA108"};
-		var sized = ["height 2.5 inch","height 2.5 inch","height 2.5 inch"];
-		var price = [80,80,80];
+		var bdesc = "Lord Ganesha painting on a canvas. Perfect for living room, bedroom, kitchen, office, Hotel, dining room etc. Must be protected from sunlight, extreme temperature, dust and moisture to ensure long life";
+		var bpnpc = {pn:"Lord Ganesha Canvas Art", pc:"YA108"};
+		var sized = ["","",""];
+		var price = [900,900,900];
 		var defcolor = ["-","-","-"];
 		document.getElementById("whatsid").href = "https://api.whatsapp.com/send?text=https%3A%2F%2Fyukthimart.com%2Fshop.html%3FYA108";
 		window.history.pushState({"html":"","pageTitle":""},"", '?YA108');
