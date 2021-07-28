@@ -7,7 +7,7 @@
 		<meta name="keywords" content="yukthi, yukthimart, yukthi mart, yukthi shopping, online shopping, mart yukthi">
 		<meta name="author" content="engineerthoughts">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title> Yukthi Mart - Women Empowerment</title>
+		<title> Yukthi Mart - Online Shopping</title>
 		<link rel="shortcut icon" href="images/logo.jpeg">
 		<link rel="stylesheet" href="css/main.css">
 		<link rel="stylesheet" href="css/carousel.css">
@@ -93,7 +93,10 @@
 					<th>Actions</th>
 				</tr>
 			</table>
-			<p>TOTAL PRICE: ₹<span id="ptotalvalue">0</span></p>
+			<p>TOTAL PRICE: ₹<span id="ptotalvalue">0</span>
+			<span id="ptotalvalue" style="font-size:10px">+ shipping charges</span>
+			</p>
+			
 			<button id="proceedcheckout" class="checkoutbutton" onclick="openpay()" >Proceed to Checkout</button>
 			<br><br>
 			<div id="pdetails" style="display:none">
@@ -145,6 +148,8 @@
 						<div id="errorId" style="display:none;"><span style="color:red">*</span><span style="color:black">Please enter the Required Field</span></div>
 						<div id="NerrorId" style="display:none;"><span style="color:red">*</span><span style="color:black">Please enter valid 10 digit Number</span></div>
 						<input type="submit" class="checkoutbutton" id="payment_btn" value="Place Your Order" onclick="checkvalue();"></input>
+						
+						<p style="font-size:12px;text-align:left;color:red">**You will not be making any payment at this moment, Sales Team will contact you with total price including Shipping charges. Your Order will be processed once you will make the payment.</p>
 						<br><br>
 					</div>
 				
@@ -1129,7 +1134,7 @@
 			
 					<div class="shopcolumn">
 					
-						<h3 class="headprod" id="jproductname01">Canvas 1</h3>
+						<h3 class="headprod" id="jproductname01">Nature Canvas Wall Art Poster</h3>
 						<p class="prodcode" id="jproductcode01">YA101</p>
 						<img class="displayimgshop" src="products/YA101/1.jpg" id="aproda01" width="60%"></img>
 						<img class="displayimgshop" src="products/YA101/1.jpg" id="aprodb01" width="60%" style="display:none"></img>
@@ -1146,7 +1151,7 @@
 					
 					<div class="shopcolumn">
 					
-						<h3 class="headprod" id="jproductname02">Canvas 2</h3>
+						<h3 class="headprod" id="jproductname02">Flower Canvas Art Poster</h3>
 						<p class="prodcode" id="jproductcode02">YA102</p>
 						<img class="displayimgshop" src="products/YA102/1.jpg" id="aproda02" width="60%"></img>
 						<img class="displayimgshop" src="products/YA102/1.jpg" id="aprodb02" width="60%" style="display:none"></img>
@@ -1164,7 +1169,7 @@
 					
 					<div class="shopcolumn">
 					
-						<h3 class="headprod" id="jproductname03">Canvas 3</h3>
+						<h3 class="headprod" id="jproductname03">Mountain Canvas Art</h3>
 						<p class="prodcode" id="jproductcode03">YA103</p>
 						<img class="displayimgshop" src="products/YA103/1.jpg" id="aproda03" width="60%"></img>
 						<img class="displayimgshop" src="products/YA103/1.jpg" id="aprodb03" width="60%" style="display:none"></img>
@@ -1181,7 +1186,7 @@
 					
 					<div class="shopcolumn">
 					
-						<h3 class="headprod" id="jproductname04">Canvas 4</h3>
+						<h3 class="headprod" id="jproductname04">Women face Canvas Art 1</h3>
 						<p class="prodcode" id="jproductcode04">YA104</p>
 						<img class="displayimgshop" src="products/YA104/1.jpg" id="aproda04" width="60%"></img>
 						<img class="displayimgshop" src="products/YA104/1.jpg" id="aprodb04" width="60%" style="display:none"></img>
@@ -1198,7 +1203,7 @@
 					
 					<div class="shopcolumn">
 					
-						<h3 class="headprod" id="jproductname05">Canvas 5</h3>
+						<h3 class="headprod" id="jproductname05">Women face Canvas Art 2</h3>
 						<p class="prodcode" id="jproductcode05">YA105</p>
 						<img class="displayimgshop" src="products/YA105/1.jpg" id="aproda05" width="60%"></img>
 						<img class="displayimgshop" src="products/YA105/1.jpg" id="aprodb05" width="60%" style="display:none"></img>
@@ -1215,7 +1220,7 @@
 					
 					<div class="shopcolumn">
 					
-						<h3 class="headprod" id="jproductname06">Canvas 6</h3>
+						<h3 class="headprod" id="jproductname06">Women Canvas Art</h3>
 						<p class="prodcode" id="jproductcode06">YA106</p>
 						<img class="displayimgshop" src="products/YA106/1.jpg" id="aproda06" width="60%"></img>
 						<img class="displayimgshop" src="products/YA106/1.jpg" id="aprodb06" width="60%" style="display:none"></img>
@@ -1233,7 +1238,7 @@
 					
 					<div class="shopcolumn">
 					
-						<h3 class="headprod" id="jproductname07">Canvas 7</h3>
+						<h3 class="headprod" id="jproductname07">Modern Art Canvas Poster</h3>
 						<p class="prodcode" id="jproductcode07">YA107</p>
 						<img class="displayimgshop" src="products/YA107/1.jpg" id="aproda07" width="60%"></img>
 						<img class="displayimgshop" src="products/YA107/1.jpg" id="aprodb07" width="60%" style="display:none"></img>
@@ -1250,7 +1255,7 @@
 					
 					<div class="shopcolumn">
 					
-						<h3 class="headprod" id="jproductname08">Canvas 8</h3>
+						<h3 class="headprod" id="jproductname08">Lord Ganesha Canvas Art</h3>
 						<p class="prodcode" id="jproductcode08">YA108</p>
 						<img class="displayimgshop" src="products/YA108/1.jpg" id="aproda08" width="60%"></img>
 						<img class="displayimgshop" src="products/YA108/1.jpg" id="aprodb08" width="60%" style="display:none"></img>
@@ -2128,7 +2133,7 @@
 
 			</div>
 		
-		<h4 id="ManualCust" class="maincategory" onclick="alert('You are trying personalized the product based on your wish. The Pricing and shipping time may vary.');mancust()">Manual Customization ▽</h4>
+		<h4 id="ManualCust" class="maincategory" onclick="alert('You are trying personalized the product based on your wish. The Pricing and shipping time may vary. Type your message and Click on Add to Cart button');mancust()">User Customization ▽</h4>
 		
 		<div id="mancust1"  style="display:none">
 		<input type="text" class="manualbox" placeholder="Please Tell us how you want your product" id="manualcustval"></input>
