@@ -187,17 +187,27 @@ function checkvalue()
 		}
 	else
 		{
+			var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 			if(numberVal.length != 10)
 			{
 				document.getElementById("errorId").style.display = "none";
+				document.getElementById("EerrorId").style.display = "none";
 				document.getElementById("NerrorId").style.display = "block";
 			}
-			else
+			
+			else if(emailVal.match(mailformat))
 			{
 				document.getElementById("errorId").style.display = "none";
 				document.getElementById("NerrorId").style.display = "none";
+				document.getElementById("EerrorId").style.display = "none";
 
 				sendformdetails();
+			}
+			else
+			{
+				document.getElementById("NerrorId").style.display = "none";
+
+				document.getElementById("EerrorId").style.display = "block";
 			}
 		}
 }
