@@ -996,7 +996,7 @@ function Loaddesc(getid,getcolor)
 	{
 		var sized = ["250g","250g","250g"];
 		var bdesc = "The beetroot malt is made of beetroot, cardamom, palm sugar, badam and almond to boost the hemoglobin. The malt can be consumed by all age group people and it is especially very healthy for pregnant women. The malt is organic and a healthy food item with no added colors, flavors and preservatives. Bulk order is acceptable with lowest price guaranteed.";
-		var bpnpc = {pn:"The beetroot malt", pc:"YF101"};
+		var bpnpc = {pn:"Beetroot Malt 250g", pc:"YF101"};
 		var price = [230,230,230];
 		var defcolor = ["-","-","-"];
 		document.getElementById("whatsid").href = "https://api.whatsapp.com/send?text=https%3A%2F%2Fyukthimart.com%2Fshop.html%3FYF101";
@@ -1015,7 +1015,7 @@ function Loaddesc(getid,getcolor)
 	{
 		var sized = ["50g","50g","50g"];
 		var bdesc = "The beetroot malt is made of beetroot, cardamom, palm sugar, badam and almond to boost the hemoglobin. The malt can be consumed by all age group people and it is especially very healthy for pregnant women. The malt is organic and a healthy food item with no added colors, flavors and preservatives. Bulk order is acceptable with lowest price guaranteed.";
-		var bpnpc = {pn:"The beetroot malt", pc:"YF102"};
+		var bpnpc = {pn:"Beetroot Malt 50g", pc:"YF102"};
 		var price = [50,50,50];
 		var defcolor = ["-","-","-"];
 		document.getElementById("whatsid").href = "https://api.whatsapp.com/send?text=https%3A%2F%2Fyukthimart.com%2Fshop.html%3FYF102";
@@ -1033,7 +1033,7 @@ function Loaddesc(getid,getcolor)
 	{
 		var sized = ["250g","250g","250g"];
 		var bdesc = "The health drink is made of 38 sprouted ingredients. The health drink can be consumed by all age group people. The drink is organic and a healthy food item with no added colors, flavors and preservatives. Bulk order is acceptable with lowest price guaranteed.";
-		var bpnpc = {pn:"The Health Drink", pc:"YF103"};
+		var bpnpc = {pn:"Sprouted Health Mix 250g", pc:"YF103"};
 		var price = [220,220,220];
 		var defcolor = ["-","-","-"];
 		document.getElementById("whatsid").href = "https://api.whatsapp.com/send?text=https%3A%2F%2Fyukthimart.com%2Fshop.html%3FYF103";
@@ -1052,7 +1052,7 @@ function Loaddesc(getid,getcolor)
 	{
 		var sized = ["50g","50g","50g"];
 		var bdesc = "The health drink is made of 38 sprouted ingredients. The health drink can be consumed by all age group people. The drink is organic and a healthy food item with no added colors, flavors and preservatives. Bulk order is acceptable with lowest price guaranteed.";
-		var bpnpc = {pn:"SMALL KUDAI/BAG", pc:"YF104"};
+		var bpnpc = {pn:"Sprouted Health Mix 50g", pc:"YF104"};
 		var price = [50,50,50];
 		var defcolor = ["-","-","-"];
 		document.getElementById("whatsid").href = "https://api.whatsapp.com/send?text=https%3A%2F%2Fyukthimart.com%2Fshop.html%3FYF104";
@@ -1071,7 +1071,7 @@ function Loaddesc(getid,getcolor)
 	{
 		var sized = ["200g","200g","200g"];
 		var bdesc = "The banana used in the powder is Kerala famous “NENTHIRAM PAZHAM” with no added colors, flavors and preservatives. The food item is organic and very healthy especially for children with their favorite ingredients added. The flour can be consumed by all age group people in the form of drinks or snacks in a preferred way. Great immune booster for babies. Bulk order is acceptable with lowest price guaranteed.";
-		var bpnpc = {pn:"The beetroot malt", pc:"YF105"};
+		var bpnpc = {pn:"Nenthiram Banana Powder 200g", pc:"YF105"};
 		var price = [210,210,210];
 		var defcolor = ["-","-","-"];
 		document.getElementById("whatsid").href = "https://api.whatsapp.com/send?text=https%3A%2F%2Fyukthimart.com%2Fshop.html%3FYF105";
@@ -1090,7 +1090,7 @@ function Loaddesc(getid,getcolor)
 	{
 		var sized = ["50g","50g","50g"];
 		var bdesc = "The banana used in the powder is Kerala famous “NENTHIRAM PAZHAM” with no added colors, flavors and preservatives. The food item is organic and very healthy especially for children with their favorite ingredients added. The flour can be consumed by all age group people in the form of drinks or snacks in a preferred way. Great immune booster for babies. Bulk order is acceptable with lowest price guaranteed.";
-		var bpnpc = {pn:"The beetroot malt", pc:"YF106"};
+		var bpnpc = {pn:"Nenthiram Banana Powder 50g", pc:"YF106"};
 		var price = [55,55,55];
 		var defcolor = ["-","-","-"];
 		document.getElementById("whatsid").href = "https://api.whatsapp.com/send?text=https%3A%2F%2Fyukthimart.com%2Fshop.html%3FYF106";
@@ -1108,7 +1108,7 @@ function Loaddesc(getid,getcolor)
 	{
 		var sized = ["200g","200g","200g"];
 		var bdesc = "The green jackfruit flour is made of green jackfruit, cardamom, badam etc with no added colors, flavors and preservatives. The food item is organic and very healthy especially for people suffering from high sugar. The flour can be consumed by all age group people in the form of dosa or snacks in a preferred way. Bulk order is acceptable with lowest price guaranteed.";
-		var bpnpc = {pn:"The Health Drink", pc:"YF107"};
+		var bpnpc = {pn:"Jackfruit Flour 200g", pc:"YF107"};
 		var price = [100,100,100];
 		var defcolor = ["-","-","-"];
 		document.getElementById("whatsid").href = "https://api.whatsapp.com/send?text=https%3A%2F%2Fyukthimart.com%2Fshop.html%3FYF107";
