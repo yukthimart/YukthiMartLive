@@ -26,15 +26,20 @@ if (typeof readurl !== "undefined")
 		artsjs();
 		canvas();
 	}
-	if (productname == "nalamproduct")
+	if (productname == "healthdrink")
 	{
 		foodjs();
 		food();
 	}
-	if (productname == "vitalpowders")
+	if (productname == "immuneboosters")
 	{
 		foodjs();
 		foodvp();
+	}
+	if (productname == "foodmasala")
+	{
+		foodjs();
+		foodmasala();
 	}
 	if (productname == "organicessentials")
 	{
