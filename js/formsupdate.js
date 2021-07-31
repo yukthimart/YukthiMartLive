@@ -48,7 +48,7 @@ function sendformdetails()
 	}
 	var total_price_detail = document.querySelector("#ptotalvalue").innerText;
 	
-	var finalproduct_val = 'Products | Size | Color | Quantity | Price \n';
+	var finalproduct_val = 'Products | Size | Color | Quantity | Price \n' + '\n';
 	for(formi = 0; formi < productlist.p_code.length; formi++)
 	{
 		var p_name_val = productlist.p_code[formi];
@@ -56,7 +56,7 @@ function sendformdetails()
 		var p_color_val = productlist.p_color[formi];
 		var p_qty_val = productlist.p_qty[formi];
 		var t_p_price_val = productlist.t_p_price[formi];
-		finalproduct_val = finalproduct_val + p_name_val + ' | ' + p_size_val + ' | ' + p_color_val + ' | ' + p_qty_val + ' | ₹' + t_p_price_val + '\n';
+		finalproduct_val = finalproduct_val + p_name_val + ' | ' + p_size_val + ' | ' + p_color_val + ' | ' + p_qty_val + ' | ₹' + t_p_price_val + '\n' + '\n';
 		
 	}
 	finalproduct_val = finalproduct_val + 'Total Price is | ₹' + total_price_detail;

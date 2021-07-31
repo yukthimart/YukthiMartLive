@@ -325,7 +325,7 @@ function food()
 	{
 	document.getElementById("foodsitems").style.display = "none";
 	}
-	window.history.pushState({"html":"","pageTitle":""},"", '?nalamproduct');
+	window.history.pushState({"html":"","pageTitle":""},"", '?healthdrink');
 	
 }
 
@@ -357,7 +357,23 @@ function foodvp()
 	{
 	document.getElementById("foodvpitems").style.display = "none";
 	}
-	window.history.pushState({"html":"","pageTitle":""},"", '?vitalpowders');
+	window.history.pushState({"html":"","pageTitle":""},"", '?immuneboosters');
+	
+}
+
+function foodmasala()
+{
+	
+	var foodx = document.getElementById("foodmasitems").style.display;
+	if (foodx == 'none')
+	{
+	document.getElementById("foodmasitems").style.display = "block";
+	}
+	else
+	{
+	document.getElementById("foodmasitems").style.display = "none";
+	}
+	window.history.pushState({"html":"","pageTitle":""},"", '?foodmasala');
 	
 }
 
